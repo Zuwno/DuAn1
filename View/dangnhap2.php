@@ -6,13 +6,20 @@
           $password = $_POST['password'];
           $sql = " select * from account where username ='$username' and password='$password'";
           $kq = $connect->query($sql);
-          if ($kq->rowCount() == 1) {
-            $_SESSION['username'] = $username;
-            header_remove();
-            header("Location: ..//Admin");
-          } else {
-            echo '<script>alert("Không nhập được")</script>';
+          if ($username == "" || $password == "")
+          {
+            echo '<script>alert("Vui lòng không để trống tài khoản hoặc mật khẩu")</script>';
           }
+          else{
+            if ($kq->rowCount() == 1) {
+                $_SESSION['username'] = $username;
+                header_remove();
+                header("Location: ..//Admin");
+              } else {
+                echo '<script>alert("Tài khoản hoặc mật khẩu sai")</script>';
+              }
+          }
+          
         };
         ?>
 <!DOCTYPE html>
