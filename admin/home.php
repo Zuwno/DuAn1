@@ -82,8 +82,10 @@
     <h2 class="font-medium text-lg pt-5 truncate mr-5">
         Báo cáo chung
     </h2>
-    <a href="" class="ml-auto flex items-center text-primary pr-5"> <i
-            class="fa-sharp fa-solid fa-rotate-right px-2"></i> Reload Data </a>
+    <a href="" class="ml-auto flex items-center text-primary pr-5"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+</svg>
+ Reload Data </a>
 </div>
 
 <div class="grid grid-cols-4 mt-5 gap-6 dropdown ">
@@ -91,7 +93,10 @@
 
         <div class="flex justify-between w-full ">
             <div>
-                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+</svg>
+
             </div>
 
             <div class="border bg-[#44946D] text-[12px] text-white rounded-2xl px-2 py-1">33 %</div>
@@ -102,25 +107,31 @@
 
     </div>
     <!-- end -->
-    <div class="bg-white p-6 rounded-lg shadow-lg ">    
+    <div class="bg-white p-6 rounded-lg shadow-lg ">
 
-        <div class="flex justify-between w-full ">
+        <div class="flex justify-between w-full text-[#E9a23c] ">
             <div>
-                <i class="fa-solid fa-table fa-lg text-[#E9A23C]"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
+</svg>
+
             </div>
 
             <div class="border bg-red-500 text-[12px] text-white rounded-2xl px-2 py-1">2 %</div>
 
         </div>
-        <div class="text-3xl font-medium leading-8 mt-6 hover:cursor-grabbing">3.721</div>
+        <div class="text-3xl font-medium leading-8 mt-6">3.721</div>
         <div class="text-base text-slate-500 mt-1">New Orders</div>
     </div>
     <!-- end -->
     <div class="bg-white p-6 rounded-lg shadow-lg ">
 
-        <div class="flex justify-between w-full ">
+        <div class="flex justify-between w-full text-[#F3CE4A]">
             <div>
-                <i class="fa-solid fa-tv fa-lg text-[#F3CE4A]"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125z" />
+</svg>
+
             </div>
 
             <div class="border bg-[#44946D] text-[12px] text-white rounded-2xl px-2 py-1">2 %</div>
@@ -132,9 +143,12 @@
     <!-- end -->
     <div class="bg-white p-6 rounded-lg shadow-lg ">
 
-        <div class="flex justify-between w-full ">
+        <div class="flex justify-between w-full text-[#E9A23C]">
             <div>
-                <i class="fa-regular fa-user fa-xl text-[#44946D]"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+</svg>
+
             </div>
 
             <div class="border bg-[#44946D] text-[12px] text-white rounded-2xl px-2 py-1">2 %</div>
@@ -147,55 +161,124 @@
 </div>
 <div class=" grid grid-cols-[49%,23%,23%] h-92   gap-6 box shadow-lg ">
 
-    <div class="pt-10 ">
+            <div>
+                <div class="font-medium text-[18px] py-7">Sales Report   </div>
+                
+                 <div class="pt-10 bg-white rounded-lg shadow-xl">
+                    <div class="flex mx-5  space-x-7 ">
+                        <div class="pr-7 border-r">
+                            <span class="text-[20px]">$ 15,000</span>
+                            <p class="text-[14px] text-[#64748B]">this month</p>
+                        </div>
+                       <div>
+                        <span class="text-[20px] ">$ 10,000</span>
+                        <p class="text-[14px] text-[#64748B]">last month</p>
+                       </div>
+                       <div class="justify-end"> 
+                        
+                        <select class="space-x-5  pr-5 pl-5">
+                            <option>Lọc theo danh mục</option>
+                            <option>No</option>
+                            <option>Maybe</option>
+                          </select>
+                          
+                       </div>
+                      
+                      
+                     </div> 
+                    <canvas id="myChart"
+                    style="display: block; 
+                    height: 300px; 
+                    width: 393px;
+                    border-radius: 8px;
+                    "
+                   
+                    class=" w-full  h-92 bg-white p-5 shadow-lg">
+                    </canvas>
+                    
+                 </div>
+               
 
-        <h1></h1>
-        <canvas id="myChart"
-        style="display: block; 
-        height: 300px; 
-        width: 393px;
-        border-radius: 8px;
-        "
-       
-        class=" w-full  h-92 bg-white p-5 shadow-lg">
-        </canvas>
-        
-
-    </div>
-    <div class="mt-10 bg-white  w-full rounded-lg">
-        <canvas id="myChart2"
-        style="display: block; height: 300px; 
-        width: 393px;
-       
-        "    
-        
-        class="w-full  "></canvas>
-
-       
-        <div class="flex pt-3 items-center">
-            
-            <div class="w-2 h-2 list-disc bg-primary rounded-full mr-3"></div>
-            <span class="truncate">17 - 30 Yearsold</span>
-            <span class="font-medium ml-auto mr-3">62%</span>
-        </div>
-    </div>
-    <div class="mt-10 bg-white  w-full rounded-lg">
-        <canvas id="myChart3"
-        style="display: block; height: 300px; 
-        width: 393px;
-       
-        "    
-        class="w-full  "></canvas>
-
+            </div>
+            <div>
+                <div class="font-medium text-[18px] py-7">Sales Report   </div>
+                <div class="pt-10 bg-white h-[463px] shadow-xl  w-full rounded-lg ">
+               
+                    <canvas id="myChart2"
+                    style="display: block; height: 350px; 
+                    width: 393px;
+                   
+                    "
+                    class="w-full"></canvas>
     
-        <div class="flex pt-3 items-center">
+    
+                    <div class="flex pt-3 items-center">
+                        
+                        <div class="w-2 h-2 list-disc bg-primary rounded-full mr-3"></div>
+                        <span class="mr-2 h-2 w-2 rounded-full bg-[#365E4F]"></span>
+                        <span class="truncate">17 - 30 Yearsold</span>
+                        <span class="font-medium ml-auto mr-3">62%</span>
+                        
+                        
+                    </div>
+                    <div class="flex pt-3 items-center">
+                        
+                        <div class="w-2 h-2 list-disc bg-primary rounded-full mr-3"></div>
+                        <span class="mr-2 h-2 w-2 rounded-full bg-[#E1AF5F]"></span>
+                        <span class="truncate">31 - 50 Years old</span>
+                        <span class="font-medium ml-auto mr-3">33%</span>
+                        
+                    </div>
+                    <div class="flex pt-3 items-center">
+                        
+                        <div class="w-2 h-2 list-disc bg-primary rounded-full mr-3"></div>
+                        <span class="mr-2 h-2 w-2 rounded-full bg-[#EFD46F]"></span>
+                        <span class="truncate"> >= 50 Years old</span>
+                        <span class="font-medium ml-auto mr-3">10%</span>
+                        
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="font-medium text-[18px] py-7">Sales Report</div>
+                <div class="pt-10 bg-white h-[463px] shadow-xl  w-full rounded-lg">
+                
+                    <canvas id="myChart3"
+                    style="display: block; height: 350px; 
+                    width: 393px;
+                   
+                    "    
+                    
+                    class="w-full  "></canvas>
+    
+                    <div class="flex pt-3 items-center">
+                        
+                        <div class="w-2 h-2 list-disc bg-primary rounded-full mr-3"></div>
+                        <span class="mr-2 h-2 w-2 rounded-full bg-[#365E4F]"></span>
+                        <span class="truncate">17 - 30 Yearsold</span>
+                        <span class="font-medium ml-auto mr-3">62%</span>
+                        
+                    </div>
+                    <div class="flex pt-3 items-center">
+                        
+                        <div class="w-2 h-2 list-disc bg-primary rounded-full mr-3"></div>
+                        <span class="mr-2 h-2 w-2 rounded-full bg-[#E1AF5F]"></span>
+                        <span class="truncate">31 - 50 Years old</span>
+                        <span class="font-medium ml-auto mr-3">33%</span>
+                        
+                    </div>
+                    <div class="flex pt-3 items-center">
+                        
+                        <div class="w-2 h-2 list-disc bg-primary rounded-full mr-3"></div>
+                        <span class="mr-2 h-2 w-2 rounded-full bg-[#EFD46F]"></span>
+                        <span class="truncate"> >= 50 Years old</span>
+                        <span class="font-medium ml-auto mr-3">10%</span>
+                        
+                    </div>
+                </div>
+            </div>
             
-            <div class="w-2 h-2 list-disc bg-primary rounded-full mr-3"></div>
-            <span class="truncate">17 - 30 Yearsold</span>
-            <span class="font-medium ml-auto mr-3">62%</span>
         </div>
-    </div>
-</div>
 </section>
 
 <script>

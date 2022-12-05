@@ -39,7 +39,7 @@
     </style>
 
     <body>
-        <section id="main-me" class="w-[22%] h-[800px] bg-[#1B4643]  fixed  text-white top-0 left-0 z-[999px] ">
+        <section id="main-me" class="w-[22%] h-[1000px] bg-[#1B4643]  fixed  text-white top-0 left-0 z-[999px] ">
             <div class="myNav ">
                 <h1 class="text-white text-xl text-center pt-5">ADMIN</h1>
             </div>
