@@ -337,7 +337,10 @@ session_start();
                         $username = $_POST['Hoten'];
                         $comment = $_POST['Binhluan'];
                         $sqqll = " insert into comment_check values (null,'$username','$comment','$id')";
-                        $kkqq = $connect->query($sqqll);
+                        if ($kkqq = $connect->query($sqqll))
+                        {
+                          echo '<script>alert("Bình luận của bạn sẽ hiển thị sau khi được xét duyệt")</script>';
+                        }
                     };
                     ?>
         <?php
