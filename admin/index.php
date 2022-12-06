@@ -195,11 +195,27 @@ if (isset($_SESSION['username'])) {
 
       case 'suabill':
         if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-          update_bill($id_bill, $bill_status);
+          $bill = loadone_bill($_GET['id']);
         }
-        $listbill = loadall_bill();
-        include "bill/list.php";
+      
+        include "bill/update.php";
         break;
+
+        case 'updatebill':
+          if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+            $id_bill = $_POST['id'];
+            $bill_status=$_POST['bill_status'];
+            update_bill($id_bill,$bill_status);
+            $thongbao = "Cập nhật thành công";
+          }
+          $listbill = loadall_bill();
+          include "bill/list.php";
+          break;
+
+
+
+
+        
     }
   } else
     include "home.php";
