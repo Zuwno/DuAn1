@@ -136,7 +136,7 @@ session_start();
       </section>
       <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
         <div class="flex  justify-between items-center  px-28 bg-white">
-        <a href="./index.php"><img class="w-[180px]" src="imgs/header_logo.png" alt=""></a>
+        <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a> 
           <div>
             <ul class="flex gap-4 font-bold ">
               <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
@@ -336,7 +336,7 @@ session_start();
                     if (isset($_POST['submit_comment'])) {
                         $username = $_POST['Hoten'];
                         $comment = $_POST['Binhluan'];
-                        $sqqll = " insert into comment values (null,'$username','$comment','$id')";
+                        $sqqll = " insert into comment_check values (null,'$username','$comment','$id')";
                         $kkqq = $connect->query($sqqll);
                     };
                     ?>

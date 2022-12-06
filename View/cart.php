@@ -91,7 +91,7 @@ if(isset($_POST['submit'])){
             </section>
             <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
                 <div class="flex  justify-between items-center  px-28 bg-white">
-                <a href="./index.php"><img class="w-[180px]" src="imgs/header_logo.png" alt=""></a>
+                <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a> 
                     <div>
                         <ul class="flex gap-4 font-bold ">
                             <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
@@ -126,7 +126,7 @@ if(isset($_POST['submit'])){
                             </li>
 
 
-                            <li class="hover:underline  hover:text-[#e76ea5]"><a href="">Tin tức </a></li>
+                           
                             <li class="hover:underline  hover:text-[#e76ea5]"><a href="lienHe.php">Liên hệ</a></li>
                         </ul>
                     </div>
