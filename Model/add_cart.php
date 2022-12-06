@@ -12,13 +12,12 @@ function delete_bill($id_bill){
 }
 function loadone_bill($id_bill){
     $sql="select * from bill where id_bill=".$id_bill;
-    $sp=pdo_query_one($sql);
-    return $sp;
+    $bill=pdo_query_one($sql);
+    return $bill;
 }
 
 function update_bill($id_bill,$bill_status){
-  
-        $sql="update bill set bill_status='Đã xác nhận' where id_bill=".$id_bill;
+        $sql="update bill set bill_status='".$bill_status."' where id_bill=".$id_bill;
         pdo_execute($sql);
     }
     
