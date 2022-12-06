@@ -53,7 +53,7 @@
   </section>
     <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
   <div class="flex  justify-between items-center  px-28 bg-white">
-        <img class="w-[180px]" src="../imgs/header_logo.png" alt="">
+  <a href="./index.php"><img class="w-[180px]" src="imgs/header_logo.png" alt=""></a>
         <div>
        <ul class="flex gap-4 font-bold ">
           <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>

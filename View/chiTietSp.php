@@ -1,3 +1,8 @@
+<?php
+// var_dump($_POST);
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -131,7 +136,7 @@
       </section>
       <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
         <div class="flex  justify-between items-center  px-28 bg-white">
-          <img class="w-[180px]" src="../imgs/header_logo.png" alt="">
+        <a href="./index.php"><img class="w-[180px]" src="imgs/header_logo.png" alt=""></a>
           <div>
             <ul class="flex gap-4 font-bold ">
               <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
@@ -190,20 +195,8 @@
                 <a href="">Trang chủ /</a>
                 <a href="">Sản phẩm nổi bật </a>
                 <h2 class="font-bold text-[27px]"><?php echo $row['name'] ?></h2>
-                <div class="border border-[#e76ea5] rounded-lg">
-                  <div class="bg-[#e76ea5] rounded-t-lg text-[15px] font-bold py-1.5 text-center"> <span class="text-white">TƯ VẤN VỀ SẢN PHẨM NÀY</span>
-
-                  </div>
-
-                  <p class="text-[15px] px-8 py-4">Bạn cần tư vấn gia công mỹ phẩm trọn gói, vui lòng nhập thông tin và gửi cho chúng tôi. Chuyên viên sẽ điện lại tư vấn cho bạn sớm nhất có thể.</p>
-                  <form action="../View/add_cart.php?add_cart&id=<?=$_GET['id']?>" method="post" class="px-8">
-                    <input type="text" class="border border-[#e76ea5] w-[40%] rounded-md px-2 py-1.5 mb-6" placeholder="Điện thoại...">
-                    <button class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-md px-2 mx-1 py-1.5 font-[600] bg-[#e76ea5] ">
-                    Thêm vào giỏ hàng & nhận tư vấn 
-                    </button>
-                  </form>
-
-                </div>
+               
+                <form action="../View/add_cart.php?add_cart&id=<?=$_GET['id']?>" method="post" class="px-8">
                 <div class="py-4">
                   <span>Danh mục : <a href="" class="text-[#e76ea5] "><?php echo $row['id_category'] ?></a></span><br>
                   <div class="flex justify-between py-2"><span>Số lượng : </span><span>Thành tiền:</span>
@@ -214,18 +207,31 @@
 
                       <div class="gg">
                         <h2 class="full-price">
-                        <?=$row ['price'] ?>
+                        <?php if(!empty($_SESSION['cart'][$id]['sl'])){
+                            $_SESSION['cart'][$id]['sl'] * $row['price'];
+                          } ?>
                         </h2>
                         <span class="qt-minus">-</span>
-                        <span class="qt">1</span>
+                        <input name="quantity" type="number" class="qt" value="1"></input>
                         <span class="qt-plus">+</span>
                         <h2 class="price">
-                         <?=$row ['price']?>
+                         <?=$row ['price']?>  
                         </h2>
                       </div>
                     </div>
+                  </div>
+                  <div class="border border-[#e76ea5] rounded-lg mt-[100px]">
+                  <div class="bg-[#e76ea5] rounded-t-lg text-[15px] font-bold py-1.5 text-center"> <span class="text-white">TƯ VẤN VỀ SẢN PHẨM NÀY</span>
 
                   </div>
+
+                  <p class="text-[15px] px-8 py-4">Bạn cần tư vấn gia công mỹ phẩm trọn gói, vui lòng nhập thông tin và gửi cho chúng tôi. Chuyên viên sẽ điện lại tư vấn cho bạn sớm nhất có thể.</p>
+                    <input style="margin-left: 10px ;" type="text" class="border border-[#e76ea5] w-[40%] rounded-md px-2 py-1.5 mb-6" placeholder="Điện thoại...">
+                    <button class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-md px-2 mx-1 py-1.5 font-[600] bg-[#e76ea5] ">
+                    Thêm vào giỏ hàng & nhận tư vấn 
+                    </button>
+                </div>
+                </form>
                   </body>
 
     </div><br>
@@ -314,14 +320,17 @@
       ?>
 <section class="max-w-7xl m-auto">
       
+      
+      <h3 class="bg-[#e76ea5] border rounded-t-lg w-[260px] text-center py-2 text-white text-[18px] font-bold ">Bình luận </h3>
       <div class=" border-2 border-t-[#e76ea5] py-8 px-4 text-[17px] mb-8">
-        <form action="" method="post">
-        <label for="">Họ tên:</label>
-        <input type="text" name="Hoten" style="border: 1px solid ;">
-        <label for="">Bình luận:</label>
-        <input type="text" name="Binhluan" style="border: 1px solid ;">
-        <input type="submit" name="submit_comment" style="border: 1px solid ;">
+      <form action="" method="post" style="margin-bottom: 20px ;">
+        <label for="" class="pr-[24.5px]  my-4  ">Họ tên:</label>
+        <input type="text" class="bg-[#D3D3D3] px-4 py-1 my-1 w-[200px]" name="Hoten" placeholder="họ tên"><br>
+        <label for="" class="pr-1">Bình luận:</label>
+        <input type="text" class="bg-[#D3D3D3] px-4 py-1 w-[200px]" name="Binhluan" placeholder="bình luận">
+        <input class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-sm px-4 mx-1 py-1 font-[600] bg-[#e76ea5]" type="submit" name="submit_comment" >
         </form>
+        <hr>
         <?php
                     include '../Model/db.php';
                     if (isset($_POST['submit_comment'])) {
@@ -331,9 +340,6 @@
                         $kkqq = $connect->query($sqqll);
                     };
                     ?>
-      </div>
-      <h3 class="bg-[#e76ea5] border rounded-t-lg w-[260px] text-center py-2 text-white text-[18px] font-bold ">Bình luận </h3>
-      <div class=" border-2 border-t-[#e76ea5] py-8 px-4 text-[17px] mb-8">
         <?php
         include '../Model/db.php';
         $sqlComment = "select * from comment where id_product = '$id' ";

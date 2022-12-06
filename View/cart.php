@@ -1,5 +1,31 @@
 <?php
+require "../Model/pdo.php";
 session_start();
+$id_product = $_GET['id'];
+if(!empty($_SESSION["cart"])){
+    $cart = $_SESSION["cart"];
+    }
+if(isset($_POST['submit'])){
+    $name = $_POST['hoten'];
+    $address = $_POST['diachi'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $content = $_POST['noidung'];
+    $total_all = $_POST['total_all'];
+    $sql = "INSERT INTO bill (bill_address, bill_email, bill_tel, bill_pttt, total_all, receive_name, bill_status) VALUES ('$address', '$email','$phone', '$content','$total_all','$name','Đang xác nhận')";
+    $query = pdo_execute($sql);
+    if(!empty($sql)){
+        $sql = "SELECT * from bill";
+        $bills = pdo_query($sql);
+        foreach($bills as $item){
+            $id_bill = $item['id_bill'];   
+    }
+    foreach($cart as $item => $val){
+        $sql = "INSERT INTO cart (id_bill, id_product, amount, price ) VALUES ($id_bill, $id_product, '$val[sl]', '$val[price]')";
+        $query = pdo_execute($sql);
+    }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +91,7 @@ session_start();
             </section>
             <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
                 <div class="flex  justify-between items-center  px-28 bg-white">
-                    <img class="w-[180px]" src="../imgs/header_logo.png" alt="">
+                <a href="./index.php"><img class="w-[180px]" src="imgs/header_logo.png" alt=""></a>
                     <div>
                         <ul class="flex gap-4 font-bold ">
                             <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
@@ -124,7 +150,7 @@ session_start();
         <div class="max-w-7xl mx-auto py-10">
             <h1 class="bg-[#e76ea5] text-[25px] p-5 rounded-lg text-white font-sans font-semibold">GIỎ HÀNG</h1>
 
-            <form action="">
+            <form action="" method="POST">
                 <table class="my-8 w-full ">
                     <thead class="">
                         <tr class="text-white text-lg bg-[#e76ea5]">
@@ -164,23 +190,63 @@ session_start();
                     <tfoot>
                         <tr class="items-center bg-[#e76ea5] text-white font-semibold ">
                             <td colspan="4" class="px-10 py-3 text-[20px]  font-sans">Tổng tiền</td>
-                            <td colspan="2" class="text-[20px]  font-sans"><?=number_format($total)?> VNĐ</td>
+                            <td colspan="2" class="text-[20px]  font-sans">
+                                <?php
+                                $total_all = 0;
+                                ?>
+                                <?=number_format($total_all += $total)?> VNĐ</td>
+                                <input type="text" value="<?=$total_all?>" hidden name="total_all">
                         </tr>
                     </tfoot>
                 </table>
 
-                <div class="w-full flex justify-end">
-                    <a href="../View/lienHe.php" class="bg-[#e76ea5] p-3 rounded-lg text-white hover:text-gray-300 font-sans font-semibold">
-                    Tiếp theo<a>
-                </div>
+                <div class="border rounded-xl bg-[#f9dbe9]">
+        <div class="">
+        <h2 class="font-bold text-[28px] text-center py-4 ">Thông tin nhận hàng</h2>
+        <form action="" method="post" class="border rounded-xl mx-6 mb-6 px-6 py-6 bg-white" >
+         <p class="font-bold text-[18px]"> Họ tên của bạn</p>
+         <input class="border rounded-sm w-full px-2 py-1.5 my-2" name="hoten" type="text" placeholder="Họ tên của bạn">
+         <p class="font-bold text-[18px]"> Địa chỉ </p>
+         <input class="border rounded-sm w-full px-2 py-1.5 my-2" name="diachi" type="text" placeholder="Địa chỉ">
+         <p class="font-bold text-[18px]"> Email </p>
+         <input class="border rounded-sm w-full px-2 py-1.5 my-2" type="email " name="email" placeholder="Địa chỉ email của bạn">
+         <p class="font-bold text-[18px]"> Số điện thoại của bạn</p>
+         <input class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" name="phone" placeholder="Số điện thoại của bạn">
+         <p class="font-bold text-[18px]"> Nội dung</p>
+         <textarea class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung" >
+         </textarea>
+         <input type="submit" name="submit" value="Gửi" class="border rounded-md hover:bg-[#e1498e]  bg-[#E76EA5] text-white font-bold px-10 py-1.5" >
+
+        </form>
+        <?php
+    include '../Model/db.php';
+    if (isset($_POST['submit'])) {
+        $fullname = $_POST['hoten'];
+        $diachi=$_POST['diachi'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $noidung = $_POST['noidung'];
+        $sql_insert = "insert into servicecontact values(null,'$fullname','$diachi','$email','$phone','$noidung')";
+        if ($fullname == ''|| $diachi=='' || $phone == '' || $noidung == '' ) {
+            echo "<script>alert('Vui lòng không để trống thông tin')</script>";
+        } else {
+            $sql = $connect->prepare($sql_insert);
+            $kq = $connect->prepare($sql_insert);
+            if ($kq->execute()) {
+                echo "<script>alert('Gửi thông tin thành công, chúng tôi sẽ sớm liên hệ')</script>";
+            } else {
+                echo "<script>alert('Gửi thông tin thất bại, vui lòng thử lại')</script>";
+            }
+        }
+    }
+    ?>
+    
+      </div>
+      </div>
             </form>
 
 
         </div>
-
-
-
-
 
 
         <footer class="px-4 md:px-0 border-t-2 ">

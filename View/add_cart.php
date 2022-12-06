@@ -1,4 +1,9 @@
 <?php
+$id = $_GET['id'];
+if(!empty(['quantity'])){
+  $quantity = $_POST['quantity'];
+
+}
 session_start();
 include '../Model/db.php';
 include '../Model/pdo.php';
@@ -8,9 +13,9 @@ if (isset($_GET['add_cart']) && isset($_GET['id'])) {
   $data = loadone_sanpham($id); 
   if (isset($_SESSION['cart'])) {
     if (isset($_SESSION['cart'][$id]['sl'])) {
-      $_SESSION['cart'][$id]['sl'] += 1;
+      $_SESSION['cart'][$id]['sl'] += $quantity;
     } else {
-      $_SESSION['cart'][$id]['sl'] = 1;
+      $_SESSION['cart'][$id]['sl'] = $quantity;
     }
     $_SESSION['cart'][$id]['id'] = $id;
     $_SESSION['cart'][$id]['name_product'] = $data['name'];
@@ -26,7 +31,7 @@ if (isset($_GET['add_cart']) && isset($_GET['id'])) {
     $_SESSION['cart'][$id]['sale'] = $data['sale'];
   }
 
-  header("location: http://localhost/DA1/View/cart.php?id=9");
+  header("location: http://localhost/DA1/View/cart.php?id=$id");
 }
 
 

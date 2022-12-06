@@ -135,7 +135,7 @@
     <footer class="px-4 md:px-0 border-t-2 ">
       <div class="max-w-7xl m-auto pt-8 grid grid-cols-4 gap-8">
         <div class="">
-          <a href=""><img class="w-[180px] h-[48px] mb-6" src="../imgs/header_logo.png" alt=""></a>
+          <a href="../index.php"><img class="w-[180px] h-[48px] mb-6" src="../imgs/header_logo.png" alt=""></a>
           <span class=" font-[900] ">Công ty Cổ phần TaeHui Mang thanh xuân đến cho phụ nữ Việt</span>
         </div>
         <div class="leading-8">

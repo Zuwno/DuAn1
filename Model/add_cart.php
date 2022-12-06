@@ -16,9 +16,9 @@ function loadone_bill($id_bill){
     return $sp;
 }
 
-function update_bill($id_bill,$id_product,$ten_user,$diachi,$sdt,$tong,$date,$ttdh){
+function update_bill($id_bill,$bill_status){
   
-        $sql="update bill set id_product='".$id_product ."',receive_name='".$ten_user."',receive_address='".$diachi."',receive_tel='".$sdt."',total_product='".$tong."',bill_date='".$date."',bill_status='".$ttdh."' where id_bill=".$id_bill;
+        $sql="update bill set bill_status='Đã xác nhận' where id_bill=".$id_bill;
         pdo_execute($sql);
     }
     

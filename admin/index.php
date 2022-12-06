@@ -178,32 +178,13 @@
 
                     case 'suabill':
                       if(isset($_GET['id'])&&($_GET['id']>0)){
-                         $bill=loadone_bill($_GET['id']);
+                        update_bill($id_bill,$bill_status);
                       }
-                      $listsanpham=loadall_sanpham();
-                      include "bill/update.php";
+                      $listbill=loadall_bill();
+                      include "bill/list.php";
                       break;
                   
-                      case 'updatebill':
-                        if(isset($_POST['capnhat'])&&($_POST['capnhat'])){
-                            $id_bill=$_POST['id'];
-                            $id_product=$_POST['idpr'];
-                            $ten_user=$_POST['ten_user'];
-                            $diachi=$_POST['diachi'];
-                            $sdt=$_POST['sdt'];
-                            $tong=$_POST['tong'];
-                            $date=$_POST['date'];
-                            $ttdh=$_POST['ttdh'];
-                            
-                            
-                            update_bill($id_bill,$id_product,$ten_user,$diachi,$sdt,$tong,$date,$ttdh);
-                            $thongbao="Cập nhật thành công";
-                        }
-                       
-                        $listsanpham=loadall_sanpham("",0);
-                        $listbill=loadall_bill();
-                        include "bill/list.php";
-                        break;
+                      
 
         }
 
@@ -220,7 +201,7 @@
   }else{
     echo"Yêu cầu đăng nhập";
 ?>
-<a href="../View/dangnhap2.php">Đăng Nhập</a>
+<a href="../View/dangnhap.php">Đăng Nhập</a>
 <?php
   }
 ?>
