@@ -29,8 +29,8 @@ $sql = "SELECT category.id_category, category.name,
                     <tr>
                         <th>Danh mục</th>
                         <th>Số lượng sp</th>
-                        <th>Gía cao </th>
-                        <th>Gía thấp</th>
+                        <th>Giá cao </th>
+                        <th>Giá thấp</th>
                         <th>Trung bình</th>
                     </tr>
                 </thead>

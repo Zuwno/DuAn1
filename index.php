@@ -97,7 +97,6 @@
               </li>
 
 
-              <li class="hover:underline  hover:text-[#e76ea5]"><a href="">Tin tức </a></li>
               <li class="hover:underline  hover:text-[#e76ea5]"><a href="./View/lienHe.php">Liên hệ</a></li>
             </ul>
           </div>
