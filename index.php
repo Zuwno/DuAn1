@@ -250,7 +250,7 @@
       <p>
         Là collagen Hàn Quốc dạng bột đầu tiên tại Việt Nam sử dụng công nghệ chiết xuất siêu tới hạn – Chechuchul (체추출). Công nghệ tiên tiến, ưu việt giúp tái tạo collagen bằng những phân tử siêu nhỏ, tăng khả năng thẩm thấu cho cơ thể gấp 2 lần.
       </p>
-      <button class="border border-[#a50c46] text-[#a50c46] px-4 py-1.5 font-[600] my-6 hover:bg-[#F8A4C4]">XEM THÊM</button>
+      <button class="border border-[#a50c46] text-[#a50c46] px-4 py-1.5 font-[600] my-6 hover:bg-[#F8A4C4]"><a href="./View/gioithieu.php">XEM THÊM</a></button>
     </section>
 
     <section class="max-w-[1570px]  m-auto bg-[rgb(238,238,238)] px-4 md:px-0">
@@ -260,7 +260,7 @@
           <h1 class="text-[20px] font-[700]">HƯƠNG VỊ THƠM NGON – TẬN HƯỞNG TỪNG KHOẢNH KHẮC
           </h1>
           <p>Với công thức độc quyền vừa có lượng collagen đậm đặc vừa có vị trái cây việt quất đặc trưng, Collagen Taehui Pink C đem đến cho người dùng trải nghiệm sản phẩm thơm ngon khó quên, trọn vẹn thưởng thức từng khoảnh khắc. </p>
-          <button class="border border-[#a50c46] text-[#a50c46] px-4 py-1.5 font-[600] mt-6 mb-2 hover:bg-[#F8A4C4]">TÌM HIỂU THÊM</button>
+          <button class="border border-[#a50c46] text-[#a50c46] px-4 py-1.5 font-[600] mt-6 mb-2 hover:bg-[#F8A4C4]"><a href="./View/sanpham.php">TÌM HIỂU THÊM</a></button>
         </div>
       </div>
 
@@ -269,7 +269,7 @@
           <h1 class="text-[20px] font-[700]">COLLAGEN 100% HÀN QUỐC
           </h1>
           <p>Là thương hiệu đến từ xứ sở nổi tiếng về làm đẹp, chăm sóc da, Collagen TaeHui Pink C là sản phẩm được nghiên cứu và hoàn thiện bởi các chuyên gia hàng đầu, đảm bảo các tiêu chuẩn, quy định khắt khe nhất của ngành mỹ phẩm Hàn Quốc. </p>
-          <button class="border border-[#a50c46] text-[#a50c46] px-4 py-1.5 font-[600] mt-6 mb-2 hover:bg-[#F8A4C4] ">TÌM HIỂU THÊM</button>
+          <button class="border border-[#a50c46] text-[#a50c46] px-4 py-1.5 font-[600] mt-6 mb-2 hover:bg-[#F8A4C4] "><a href="./View/sanpham.php">TÌM HIỂU THÊM</a></button>
         </div>
         <img class="w-[493px] " src="imgs/anh2.jpg" alt="">
       </div>
@@ -280,7 +280,7 @@
           <h1 class="text-[20px] font-[700] pt-20">CÔNG THỨC ĐỘC QUYỀN COLLAGEN PINK C CÓ GÌ?
           </h1>
           <p>Ngoài Collagen, Taehui Pink C còn bổ sung Vitamin C, HA, Glutathione giúp cơ thể tăng khả năng kháng khuẩn miễn dịch, cung cấp dưỡng chất chống lão hóa, cấp ẩm cho da vượt trội. </p>
-          <button class="border border-[#a50c46] text-[#a50c46] px-4 py-1.5 font-[600] mt-6 mb-2 hover:bg-[#F8A4C4]">TÌM HIỂU THÊM</button>
+          <button class="border border-[#a50c46] text-[#a50c46] px-4 py-1.5 font-[600] mt-6 mb-2 hover:bg-[#F8A4C4]"><a href="./View/sanpham.php">TÌM HIỂU THÊM</a></button>
         </div>
       </div>
     </section>
@@ -293,7 +293,7 @@
           <h2 class="text-[#e76ea5] text-[40px] font-bold">TAEHUI VIỆT NAM</h2>
           <p class="text-[#494747] text-[17px] py-4">Công Ty TaeHui Việt Nam thành lập với mục tiêu chuyên cung cấp các sản phẩm hỗ trợ sức khoẻ và làm đẹp chất lượng, thân thiện môi trường, đồng thời chúng tôi mong muốn TaeHui sẽ là người bạn đồng hành trên hành trình yêu bản thân của phụ nữ Việt. <br>
             TaeHui Việt Nam trân trọng và tôn vinh giá trị mọi nét đẹp của người phụ nữ Việt. Cải tiến không ngừng, tận tâm và chăm sóc khách hàng, lấy khách hàng là trung tâm chính là tôn chỉ và giá trị cốt lõi mà TaeHui luôn duy trì và hướng đến.</p>
-          <button type="submit" class="border border-black px-8  py-2  rounded-md font-bold text-[18px] text-[#494747]"><a href="">Tìm hiểu thêm</a> </button>
+          <button type="submit" class="border border-black px-8  py-2  rounded-md font-bold text-[18px] text-[#494747]"><a href=""><a href="./View/lienHe.php">TÌM HIỂU THÊM</a></a> </button>
 
 
         </div>

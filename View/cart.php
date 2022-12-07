@@ -203,19 +203,20 @@ if(isset($_POST['submit'])){
                 <div class="border rounded-xl bg-[#f9dbe9]">
         <div class="">
         <h2 class="font-bold text-[28px] text-center py-4 ">Thông tin nhận hàng</h2>
+        
         <form action="" method="post" class="border rounded-xl mx-6 mb-6 px-6 py-6 bg-white" >
-         <p class="font-bold text-[18px]"> Họ tên của bạn</p>
-         <input class="border rounded-sm w-full px-2 py-1.5 my-2" name="hoten" type="text" placeholder="Họ tên của bạn">
-         <p class="font-bold text-[18px]"> Địa chỉ </p>
-         <input class="border rounded-sm w-full px-2 py-1.5 my-2" name="diachi" type="text" placeholder="Địa chỉ">
-         <p class="font-bold text-[18px]"> Email </p>
-         <input class="border rounded-sm w-full px-2 py-1.5 my-2" type="email " name="email" placeholder="Địa chỉ email của bạn">
-         <p class="font-bold text-[18px]"> Số điện thoại của bạn</p>
-         <input class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" name="phone" placeholder="Số điện thoại của bạn">
-         <p class="font-bold text-[18px]"> Nội dung</p>
-         <textarea class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung" >
+         <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Họ tên (*):</p>
+         <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="hoten" require type="text" placeholder="Họ tên của bạn">
+         <p style="margin-left: 15px ;  " class="font-bold text-[18px]"> Địa chỉ (*): </p>
+         <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="diachi" require type="text" placeholder="Địa chỉ">
+         <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Email: </p>
+         <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="email " require name="email" placeholder="Địa chỉ email của bạn">
+         <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Số điện thoại (*):</p>
+         <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" require name="phone" placeholder="Số điện thoại của bạn">
+         <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Nội dung:</p>
+         <textarea style="width: 1250px ; margin-left: 15px ;" class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung" >
          </textarea>
-         <input type="submit" name="submit" value="Gửi" class="border rounded-md hover:bg-[#e1498e]  bg-[#E76EA5] text-white font-bold px-10 py-1.5" >
+         <input style=" margin-left: 15px ;margin-bottom: 10px ;" type="submit" name="submit" value="Gửi" class="border rounded-md hover:bg-[#e1498e]  bg-[#E76EA5] text-white font-bold px-10 py-1.5" >
 
         </form>
         <?php
@@ -227,7 +228,7 @@ if(isset($_POST['submit'])){
         $phone = $_POST['phone'];
         $noidung = $_POST['noidung'];
         $sql_insert = "insert into servicecontact values(null,'$fullname','$diachi','$email','$phone','$noidung')";
-        if ($fullname == ''|| $diachi=='' || $phone == '' || $noidung == '' ) {
+        if ($fullname == ''|| $diachi=='' || $phone == '' ) {
             echo "<script>alert('Vui lòng không để trống thông tin')</script>";
         } else {
             $sql = $connect->prepare($sql_insert);
