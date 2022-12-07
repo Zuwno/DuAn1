@@ -212,7 +212,7 @@ session_start();
                           } ?>
                         </h2>
                         <span class="qt-minus">-</span>
-                        <input name="quantity" type="number" class="qt" value="1"></input>
+                        <input name="quantity" type="number"  min="1" max="10"  class="qt" value="1"></input>
                         <span class="qt-plus">+</span>
                         <h2 class="price">
                          <?=$row ['price']?>  
