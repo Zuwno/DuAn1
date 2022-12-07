@@ -210,9 +210,9 @@ if(isset($_POST['submit'])){
          <p style="margin-left: 15px ;  " class="font-bold text-[18px]"> Địa chỉ (*): </p>
          <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="diachi" require type="text" placeholder="Địa chỉ">
          <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Email: </p>
-         <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="email " require name="email" placeholder="Địa chỉ email của bạn">
+         <input title="Định dạng Email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="email "  name="email" placeholder="Địa chỉ email của bạn">
          <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Số điện thoại (*):</p>
-         <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" require name="phone" placeholder="Số điện thoại của bạn">
+         <input title="Định dạng số điện thoại"  pattern="[0-9]{10}" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" require name="phone" placeholder="Số điện thoại của bạn">
          <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Nội dung:</p>
          <textarea style="width: 1250px ; margin-left: 15px ;" class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung" >
          </textarea>
