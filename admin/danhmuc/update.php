@@ -55,7 +55,7 @@
             <?php 
                 if(isset($thongbao) && $thongbao!="") { ?>
                     <script>
-                        window.location.href = 'http://localhost/duan1/DA1/Admin/index.php?act=listdm';
+                        window.location.href = 'http://localhost/DA1/Admin/index.php?act=listdm';
                     </script>
             <?php } ?>
                     </form>
