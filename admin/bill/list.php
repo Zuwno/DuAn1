@@ -37,8 +37,8 @@
                         <td><?=$bill_date?></td>
                         <td class="text-green-500"><?=$bill_status?></td>
                         <td>
-                                <a href="<?=$suabill?>" class="bg-blue-400 text-white px-3 py-2 rounded-md hover:bg-gray-400 ">Xác nhận</a>
-                         
+                                <a href="<?=$suabill?>" class="bg-blue-400 text-white px-3 py-2 rounded-md hover:bg-gray-400  ">Xác nhận</a>
+                        
                                 <a  onclick="return confirm('Bạn có muốn xóa sản phẩm này không')" href="<?=$xoabill?>" class="bg-red-400 text-white px-3 py-2 rounded-md hover:bg-gray-400">Xóa</a>
                        
                                 </td>

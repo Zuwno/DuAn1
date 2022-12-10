@@ -36,7 +36,7 @@
                             <select name="bill_status" id="" class="border  border-gray-600 p-2 m-3 w-[50%] rounded-lg">
                                 <option value="<?=$bill_status?>"><?=$bill_status?></option>
                             
-                                <option value="Đang xác nhận">Đang xác nhận</option>
+                                <option value="Đã xác nhận">Đã xác nhận</option>
                                 <option value="Đang giao hàng">Đang giao hàng</option>
                                 <option value="Đã giao hàng">Đã giao hàng</option>
                                 <option value="Đã thanh toán">Đã thanh toán</option>

@@ -44,7 +44,7 @@
                         <td>Ảnh</td>
                       
                         
-                        <td>Lượt xem</td>
+                        
                         <td></td>
                     </tr>
 <?php 
@@ -65,7 +65,7 @@
                 <td><?=$name?></td>
                 <td><?=$price?> VNĐ</td>
                 <td><?=$hinh?></td>
-                <td><?=$view?></td>
+                
 
                 <td>
                     <a href="<?=$suasp?>" class="bg-blue-400 text-white px-3 py-2 rounded-md hover:bg-gray-400 ">Sửa</a>
