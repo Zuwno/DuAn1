@@ -14,24 +14,24 @@
                         <td></td>
                     </tr>
 <?php 
-    foreach ($list_binhluan as $binhluan) {
+    foreach ($list_binhluan as $binhluan) :
         extract($binhluan);
 
         $xoabl="index.php?act=xoabl&id=".$id_comment;
-
-        echo '<tr class="border-b">
-                <td class="py-4 px-5">'.$id_comment.'</td>
-                <td>'.$comment.'</td>
-                <td class="px-5">'.$username.'</td>
-                <td class="px-8">'.$id_product.'</td>
+?>
+        <tr class="border-b">
+                <td class="py-4 px-5"><?=$id_comment?></td>
+                <td><?=$comment?></td>  
+                <td class="px-5"><?=$username?></td> 
+                <td class="px-8"><?=$id_product?></td> 
                 <td>
                     
-                    <a href="'.$xoabl.'" class="bg-red-400 text-white px-3 py-2 rounded-md hover:bg-gray-400">Xóa</a>
+                <a  onclick="return confirm('Bạn có muốn xóa danh mục này không')" href="<?=$xoabl?>"  class="bg-red-400 text-white px-3 py-2 rounded-md hover:bg-gray-400">Xóa</a>
                 </td>
-            </tr>';
+        </tr>
                     
-    }
-?>                   
+    
+<?php endforeach ?>                   
                 </table>
 
                 
