@@ -162,10 +162,11 @@
                 <a href="chiTietSp.php?id=<?php echo $row['id_product'] ?>"> <img class="md:w-full w-[265px] h-[265px] m-auto " src="../imgs/<?php echo $row['img'] ?>" alt=""></a>
 
                 <div class=" py-4 ">
-                  <span class="text-[12px] font-[400] text-[#777]"><?php echo $row['name'] ?></span><br>
+                  <span class="text-[20px] font-[400] text-[#777]"><?php echo $row['name'] ?></span><br>
+                  <span style="color: red ;" class="text-[20px] font-[400] "><?php echo $row['price'] ?>đ</span><br>
                   <a style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical; overflow: hidden; " href="chiTietSp.php?id=<?php echo $row['id_product'] ?>" class="text-[#4E657B] hover:text-[#f84689] "><?php echo $row['detail'] ?></a> <br>
 
-                  <button class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-sm px-5 py-1.5 font-[600] mt-6 mb-2 bg-[#e76ea5] "><a href="">Tìm hiểu thêm </a></button>
+                  <button class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-sm px-5 py-1.5 font-[600] mt-6 mb-2 bg-[#e76ea5] "><a href="chiTietSp.php?id=<?php echo $row['id_product'] ?>">Tìm hiểu thêm </a></button>
                 </div>
               </div>
 

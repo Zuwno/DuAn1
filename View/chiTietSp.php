@@ -14,7 +14,8 @@ session_start();
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="shortcut icon" href="//theme.hstatic.net/200000557063/1000907375/14/favicon.png?v=1162" type="image/png">
-
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -33,6 +34,7 @@ session_start();
       font-family: 'Tinos', serif;
     }
 
+   
 
     .product .gg .price {
       background: #fcfcfc;
@@ -108,6 +110,13 @@ session_start();
       line-height: 30px;
 
     }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
   </style>
 </head>
 
@@ -199,7 +208,7 @@ session_start();
                 <form action="../View/add_cart.php?add_cart&id=<?=$_GET['id']?>" method="post" class="px-8">
                 <div class="py-4">
                   <span>Danh mục : <a href="" class="text-[#e76ea5] "><?php echo $row['id_category'] ?></a></span><br>
-                  <div class="flex justify-between py-2"><span>Số lượng : </span><span>Thành tiền:</span>
+                  <div class="flex justify-between py-2"><span>Số lượng : </span><span>Giá Tiền:</span>
                   </div>
                   <div class="">
 
@@ -211,23 +220,28 @@ session_start();
                             $_SESSION['cart'][$id]['sl'] * $row['price'];
                           } ?>
                         </h2>
-                        <span class="qt-minus">-</span>
-                        <input name="quantity" type="number"  min="1" max="10"  class="qt" value="1"></input>
-                        <span class="qt-plus">+</span>
-                        <h2 class="price">
-                         <?=$row ['price']?>  
+                        
+                        <input style="width: 60px ;" name="quantity" type="number"  min="1" max="10"  class="qt" value="1"></input>
+                        
+                        <h2 style="color: red ; font-size: 20px;" class="price">
+                         <?=$row ['price']?>đ 
                         </h2>
                       </div>
                     </div>
                   </div>
-                  <div class="border border-[#e76ea5] rounded-lg mt-[100px]">
-                  <div class="bg-[#e76ea5] rounded-t-lg text-[15px] font-bold py-1.5 text-center"> <span class="text-white">TƯ VẤN VỀ SẢN PHẨM NÀY</span>
+                  <div class="border border-[#e76ea5] rounded-lg mt-[100px] text-center">
+                  <div class="bg-[#e76ea5] rounded-t-lg text-[15px] font-bold py-1.5 text-center"> <span class="text-white">Mô Tả sản phẩm</span>
 
                   </div>
-
-                  <p class="text-[15px] px-8 py-4">Bạn cần tư vấn gia công mỹ phẩm trọn gói, vui lòng nhập thông tin và gửi cho chúng tôi. Chuyên viên sẽ điện lại tư vấn cho bạn sớm nhất có thể.</p>
-                    <input style="margin-left: 10px ;" type="text" class="border border-[#e76ea5] w-[40%] rounded-md px-2 py-1.5 mb-6" placeholder="Điện thoại...">
-                    <button class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-md px-2 mx-1 py-1.5 font-[600] bg-[#e76ea5] ">
+                  <p class="text-[20px] px-8 py-4 text-left">
+                  <?php echo $row['name'] ?> 
+                  </p>
+                  <p class="text-[15px] px-8 pb-4 text-left">
+                  
+                    <?php echo $row['detail'] ?>
+                  </p>
+                 
+                    <button  class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-md px-2 mx-1 py-1.5 font-[600] bg-[#e76ea5] mb-4 ">
                     Thêm vào giỏ hàng & nhận tư vấn 
                     </button>
                 </div>
@@ -325,9 +339,9 @@ session_start();
       <div class=" border-2 border-t-[#e76ea5] py-8 px-4 text-[17px] mb-8">
       <form action="" method="post" style="margin-bottom: 20px ;">
         <label for="" class="pr-[24.5px]  my-4  ">Họ tên:</label>
-        <input type="text" class="bg-[#D3D3D3] px-4 py-1 my-1 w-[200px]" name="Hoten" placeholder="họ tên"><br>
+        <input type="text" class="bg-[#D3D3D3] px-4 py-1 my-1 w-[200px]" name="Hoten" ><br>
         <label for="" class="pr-1">Bình luận:</label>
-        <input type="text" class="bg-[#D3D3D3] px-4 py-1 w-[200px]" name="Binhluan" placeholder="bình luận">
+        <input type="text" class="bg-[#D3D3D3] px-4 py-1 w-[200px]" name="Binhluan" >
         <input class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-sm px-4 mx-1 py-1 font-[600] bg-[#e76ea5]" type="submit" name="submit_comment" >
         </form>
         <hr>
@@ -487,5 +501,6 @@ session_start();
     });
   });
 </script>
-
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </html>
