@@ -485,7 +485,7 @@ body {
 			<div class="col align-items-center flex-col">
 				<div class="text sign-in">
 					<h2>
-						Control Panel
+						Admin Page
 					</h2>
 	
 				</div>
