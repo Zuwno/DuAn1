@@ -213,6 +213,10 @@ if (isset($_SESSION['username'])) {
           break;
 
 
+          case 'ctbill':
+            
+            include "bill/bill_detail.php";
+            break;
 
 
         

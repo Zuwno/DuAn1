@@ -17,12 +17,13 @@
                     </tr>
 <?php 
     
-    $sql = "SELECT * FROM bill";
+    $sql = "SELECT * FROM bill order by id_bill desc";
     $listbill = pdo_query($sql);
     foreach ($listbill as $bill) :
         extract($bill);
         $suabill="index.php?act=suabill&id=".$id_bill;
         $xoabill="index.php?act=xoabill&id=".$id_bill;
+        $ctbill="index.php?act=ctbill&id=".$id_bill;
 
 ?>
 
@@ -38,7 +39,7 @@
                         <td class="text-green-500"><?=$bill_status?></td>
                         <td>
                                 <a href="<?=$suabill?>" class="bg-blue-400 text-white px-3 py-2 rounded-md hover:bg-gray-400  ">Xác nhận</a>
-                        
+                                <a href="<?=$ctbill?>" class="bg-blue-400 text-white px-3 py-2 rounded-md hover:bg-gray-400  ">Chi tiết</a>
                                 <a  onclick="return confirm('Bạn có muốn xóa sản phẩm này không')" href="<?=$xoabill?>" class="bg-red-400 text-white px-3 py-2 rounded-md hover:bg-gray-400">Xóa</a>
                        
                                 </td>

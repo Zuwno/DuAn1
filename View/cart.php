@@ -174,8 +174,8 @@ if (isset($_POST['submit'])) {
                                     <td><?= number_format($item['price']) ?></td>
                                     <td><?= number_format($item['sl']) ?></td>
                                     <td><?= number_format($item['price'] * $item['sl']) ?></td>
-                                    <td><a href="../Model/deletecart.php?id=<?php echo $item['id']?>"><input type="submit" name="" value="Xóa" class="bg-[#e76ea5] p-2  px-4 rounded-lg text-white hover:text-gray-300 font-sans font-semibold"></a></td>
-
+                                    <td><a href="../Model/deletecart.php?id=<?php echo $item['id']?>">Xóa</a></td>
+                                    <button></button>
                                 </tr>
                             <?php } ?>
                         <?php } ?>

@@ -2,7 +2,7 @@
 
 
 function loadall_bill(){
-    $sql="select * from bill order by id_bill  desc";
+    $sql="select * from bill order by id_bill desc";
     // select * from bill order by id_bill  desc
     // select product.name , bill.id_bill , bill.bill_address, bill.bill_tel, bill.total_bill , bill.bill_date, bill.bill_status, bill.receive_name from bill join product on bill.id_product = product.id_product
     $listbill=pdo_query($sql);
