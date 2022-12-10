@@ -2,10 +2,10 @@
 require "../Model/pdo.php";
 session_start();
 $id_product = $_GET['id'];
-if(!empty($_SESSION["cart"])){
+if (!empty($_SESSION["cart"])) {
     $cart = $_SESSION["cart"];
-    }
-if(isset($_POST['submit'])){
+}
+if (isset($_POST['submit'])) {
     $name = $_POST['hoten'];
     $address = $_POST['diachi'];
     $email = $_POST['email'];
@@ -14,16 +14,16 @@ if(isset($_POST['submit'])){
     $total_all = $_POST['total_all'];
     $sql = "INSERT INTO bill (bill_address, bill_email, bill_tel, bill_pttt, total_all, receive_name, bill_status) VALUES ('$address', '$email','$phone', '$content','$total_all','$name','Đang xác nhận')";
     $query = pdo_execute($sql);
-    if(!empty($sql)){
+    if (!empty($sql)) {
         $sql = "SELECT * from bill";
         $bills = pdo_query($sql);
-        foreach($bills as $item){
-            $id_bill = $item['id_bill'];   
-    }
-    foreach($cart as $item => $val){
-        $sql = "INSERT INTO cart (id_bill, id_product, amount, price ) VALUES ($id_bill, $id_product, '$val[sl]', '$val[price]')";
-        $query = pdo_execute($sql);
-    }
+        foreach ($bills as $item) {
+            $id_bill = $item['id_bill'];
+        }
+        foreach ($cart as $item => $val) {
+            $sql = "INSERT INTO cart (id_bill, id_product, amount, price ) VALUES ($id_bill, $id_product, '$val[sl]', '$val[price]')";
+            $query = pdo_execute($sql);
+        }
     }
 }
 ?>
@@ -40,12 +40,9 @@ if(isset($_POST['submit'])){
     <link rel="shortcut icon" href="//theme.hstatic.net/200000557063/1000907375/14/favicon.png?v=1162" type="image/png">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.css">
@@ -55,14 +52,14 @@ if(isset($_POST['submit'])){
 
 
     <style>
-    * {
-        font-family: 'Tinos', serif;
+        * {
+            font-family: 'Tinos', serif;
 
-    }
+        }
 
-    p {
-        font-size: 18px;
-    }
+        p {
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -91,7 +88,7 @@ if(isset($_POST['submit'])){
             </section>
             <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
                 <div class="flex  justify-between items-center  px-28 bg-white">
-                <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a> 
+                    <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
                     <div>
                         <ul class="flex gap-4 font-bold ">
                             <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
@@ -101,32 +98,30 @@ if(isset($_POST['submit'])){
                             <li>
                                 <a href="sanpham.php" class="hover:underline  hover:text-[#e76ea5]">Sản phẩm</a>
                                 <ul class="list-sanPham px-4 w-[200px] border border-[#bbb] ">
-                                    <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a
-                                            href="">Hộp đơn</a></li>
+                                    <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Hộp đơn</a></li>
                                     <hr>
-                                    <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a
-                                            href="">Combo 2 hộp</a>
+                                    <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Combo 2 hộp</a>
                                     </li>
                                     <li class="text-[#777] hover:text-[#e76ea5] font-[400]  py-2"><a href="">Combo 3
                                             hộp</a></li>
                                 </ul>
                                 <style>
-                                .list-sanPham {
-                                    background-color: white;
-                                    position: absolute;
-                                    display: none;
-                                    z-index: 1;
+                                    .list-sanPham {
+                                        background-color: white;
+                                        position: absolute;
+                                        display: none;
+                                        z-index: 1;
 
-                                }
+                                    }
 
-                                .nav-main ul li:hover .list-sanPham {
-                                    display: block;
-                                }
+                                    .nav-main ul li:hover .list-sanPham {
+                                        display: block;
+                                    }
                                 </style>
                             </li>
 
 
-                           
+
                             <li class="hover:underline  hover:text-[#e76ea5]"><a href="lienHe.php">Liên hệ</a></li>
                         </ul>
                     </div>
@@ -140,8 +135,7 @@ if(isset($_POST['submit'])){
                     <img class="absolute" src="../imgs/breadcrumb_img.png" alt="">
                     <div class=" py-12 pl-28 relative">
                         <h2 class="text-white font-bold text-[38px] ">GIỎ HÀNG CỦA BẠN</h2>
-                        <span class="text-white text-[17px] "><a href="index.php">Trang chủ</a> <i
-                                class="fa fa-angle-right" aria-hidden="true"></i><a href=""> Giỏ hàng</a> </span>
+                        <span class="text-white text-[17px] "><a href="index.php">Trang chủ</a> <i class="fa fa-angle-right" aria-hidden="true"></i><a href=""> Giỏ hàng</a> </span>
                     </div>
                 </div>
             </section>
@@ -163,28 +157,28 @@ if(isset($_POST['submit'])){
                         </tr>
                     </thead>
 
-                    <tbody >
+                    <tbody>
                         <?php
-                       if (isset($_SESSION['cart'])) { 
+                        if (isset($_SESSION['cart'])) {
                         ?>
-                        <?php
-                        $total = 0;
-                        foreach ($_SESSION['cart'] as $key => $item) {
-                            $total += $item['price'] * $item['sl'];
+                            <?php
+                            $total = 0;
+                            foreach ($_SESSION['cart'] as $key => $item) {
+                                $total += $item['price'] * $item['sl'];
                             ?>
-                            <tr class="text-md font-semibold border-b p-2">
-                                <td class="mr-2">
-                                    <img src="http://localhost/DA1/imgs/<?=$item['image'] ?>" alt="" style="width: 150px;height: 150px">
-                                </td>
-                                <td><?=$item['name_product']?></td>
-                                <td><?=number_format($item['price'])?></td>
-                                <td><?=number_format($item['sl'])?></td>
-                                <td><?=number_format($item['price'] * $item['sl'])?></td>
-                                <td><input type="submit" name="" value="Xóa"
-                                class="bg-[#e76ea5] p-2  px-4 rounded-lg text-white hover:text-gray-300 font-sans font-semibold"></td>
-                            </tr>
+                                <tr class="text-md font-semibold border-b p-2">
+                                    <td class="mr-2">
+                                        <img src="http://localhost/DA1/imgs/<?= $item['image'] ?>" alt="" style="width: 150px;height: 150px">
+                                    </td>
+                                    <td><?= $item['name_product'] ?></td>
+                                    <td><?= number_format($item['price']) ?></td>
+                                    <td><?= number_format($item['sl']) ?></td>
+                                    <td><?= number_format($item['price'] * $item['sl']) ?></td>
+                                    <td><a href="../Model/deletecart.php?id=<?php echo $item['id']?>"><input type="submit" name="" value="Xóa" class="bg-[#e76ea5] p-2  px-4 rounded-lg text-white hover:text-gray-300 font-sans font-semibold"></a></td>
+
+                                </tr>
                             <?php } ?>
-                      <?php } ?>
+                        <?php } ?>
 
                     </tbody>
                     <tfoot>
@@ -194,56 +188,56 @@ if(isset($_POST['submit'])){
                                 <?php
                                 $total_all = 0;
                                 ?>
-                                <?=number_format($total_all += $total)?> VNĐ</td>
-                                <input type="text" value="<?=$total_all?>" hidden name="total_all">
+                                <?= number_format($total_all += $total) ?> VNĐ</td>
+                            <input type="text" value="<?= $total_all ?>" hidden name="total_all">
                         </tr>
                     </tfoot>
                 </table>
 
                 <div class="border rounded-xl bg-[#f9dbe9]">
-        <div class="">
-        <h2 class="font-bold text-[28px] text-center py-4 ">Thông tin nhận hàng</h2>
-        
-        <form action="" method="post" class="border rounded-xl mx-6 mb-6 px-6 py-6 bg-white" >
-         <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Họ tên (*):</p>
-         <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="hoten" require type="text" placeholder="Họ tên của bạn">
-         <p style="margin-left: 15px ;  " class="font-bold text-[18px]"> Địa chỉ (*): </p>
-         <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="diachi" require type="text" placeholder="Địa chỉ">
-         <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Email: </p>
-         <input title="Định dạng Email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="email "  name="email" placeholder="Địa chỉ email của bạn">
-         <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Số điện thoại (*):</p>
-         <input title="Định dạng số điện thoại"  pattern="[0-9]{10}" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" require name="phone" placeholder="Số điện thoại của bạn">
-         <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Nội dung:</p>
-         <textarea style="width: 1250px ; margin-left: 15px ;" class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung" >
-         </textarea>
-         <input style=" margin-left: 15px ;margin-bottom: 10px ;" type="submit" name="submit" value="Gửi" class="border rounded-md hover:bg-[#e1498e]  bg-[#E76EA5] text-white font-bold px-10 py-1.5" >
+                    <div class="">
+                        <h2 class="font-bold text-[28px] text-center py-4 ">Thông tin nhận hàng</h2>
 
-        </form>
-        <?php
-    include '../Model/db.php';
-    if (isset($_POST['submit'])) {
-        $fullname = $_POST['hoten'];
-        $diachi=$_POST['diachi'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $noidung = $_POST['noidung'];
-        $sql_insert = "insert into servicecontact values(null,'$fullname','$diachi','$email','$phone','$noidung')";
-        if ($fullname == ''|| $diachi=='' || $phone == '' ) {
-            echo "<script>alert('Vui lòng không để trống thông tin')</script>";
-        } else {
-            $sql = $connect->prepare($sql_insert);
-            $kq = $connect->prepare($sql_insert);
-            if ($kq->execute()) {
-                echo "<script>alert('Gửi thông tin thành công, chúng tôi sẽ sớm liên hệ')</script>";
-            } else {
-                echo "<script>alert('Gửi thông tin thất bại, vui lòng thử lại')</script>";
-            }
-        }
-    }
-    ?>
-    
-      </div>
-      </div>
+                        <form action="" method="post" class="border rounded-xl mx-6 mb-6 px-6 py-6 bg-white">
+                            <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Họ tên (*):</p>
+                            <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="hoten" require type="text" placeholder="Họ tên của bạn">
+                            <p style="margin-left: 15px ;  " class="font-bold text-[18px]"> Địa chỉ (*): </p>
+                            <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="diachi" require type="text" placeholder="Địa chỉ">
+                            <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Email: </p>
+                            <input title="Định dạng Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="email " name="email" placeholder="Địa chỉ email của bạn">
+                            <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Số điện thoại (*):</p>
+                            <input title="Định dạng số điện thoại" pattern="[0-9]{10}" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" require name="phone" placeholder="Số điện thoại của bạn">
+                            <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Nội dung:</p>
+                            <textarea style="width: 1250px ; margin-left: 15px ;" class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung">
+         </textarea>
+                            <input style=" margin-left: 15px ;margin-bottom: 10px ;" type="submit" name="submit" value="Gửi" class="border rounded-md hover:bg-[#e1498e]  bg-[#E76EA5] text-white font-bold px-10 py-1.5">
+
+                        </form>
+                        <?php
+                        include '../Model/db.php';
+                        if (isset($_POST['submit'])) {
+                            $fullname = $_POST['hoten'];
+                            $diachi = $_POST['diachi'];
+                            $email = $_POST['email'];
+                            $phone = $_POST['phone'];
+                            $noidung = $_POST['noidung'];
+                            $sql_insert = "insert into servicecontact values(null,'$fullname','$diachi','$email','$phone','$noidung')";
+                            if ($fullname == '' || $diachi == '' || $phone == '') {
+                                echo "<script>alert('Vui lòng không để trống thông tin')</script>";
+                            } else {
+                                $sql = $connect->prepare($sql_insert);
+                                $kq = $connect->prepare($sql_insert);
+                                if ($kq->execute()) {
+                                    echo "<script>alert('Gửi thông tin thành công, chúng tôi sẽ sớm liên hệ')</script>";
+                                } else {
+                                    echo "<script>alert('Gửi thông tin thất bại, vui lòng thử lại')</script>";
+                                }
+                            }
+                        }
+                        ?>
+
+                    </div>
+                </div>
             </form>
 
 
