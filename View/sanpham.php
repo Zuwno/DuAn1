@@ -32,12 +32,12 @@
 
 <body>
   <article>
-    <header class="nav-main box-border">
+  <header class="nav-main box-border">
       <section class="bg-[#e76ea5] ">
         <div class="max-w-7xl m-auto flex justify-between text-white items-center ">
 
-          <span class="py-2">CÔNG TY CỔ PHẦN TAEHUI</span>
-          <div class="flex items-center space-x-3">
+          <span class="py-2 px-20 md:px-0 ">CÔNG TY CỔ PHẦN TAEHUI</span>
+          <div class="flex items-center space-x-3 hidden md:block">
 
             <a href=""><i class="fa fa-envelope px-2 " aria-hidden="true"></i>taehuivietnam@gmail.com </a>
 
@@ -46,24 +46,27 @@
             <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-            <div class="header-search">
-              <a href="" class="docs-creator"><i class="fa fa-search"></i></a>
-            </div>
+            <a href="Model/cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
           </div>
 
         </div>
       </section>
-      <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
-        <div class="flex  justify-between items-center  px-28 bg-white">
-        <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>  
-          <div>
-            <ul class="flex gap-4 font-bold ">
+      <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg   ">
+        <div class="flex  justify-between items-center px-2 md:px-28 bg-white w-full">
+          <a href="./index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
+          <div class="text-right">
+          <button class="md:hidden md:text-right" onclick="handClick()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+            <ul id="main-menu" class=" gap-4 font-bold hidden md:flex items-end text-right     delay-150  ">
               <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
-              <li class="hover:underline  hover:text-[#e76ea5]"><a href="gioithieu.php">Giới thiệu</a></li>
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="./gioithieu.php">Giới thiệu</a></li>
 
               <li>
-                <a href="/View/sanpham.php" class="hover:underline  hover:text-[#e76ea5]">Sản phẩm</a>
-                <ul class="list-sanPham px-4 w-[200px] border border-[#bbb] ">
+                <a href="./sanpham.php" class="hover:underline  hover:text-[#e76ea5]">Sản phẩm</a>
+                <ul class="list-sanPham  px-4 w-[200px]  border border-[#bbb] ">
                   <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Hộp đơn</a></li>
                   <hr>
                   <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Combo 2 hộp</a></li>
@@ -85,29 +88,26 @@
               </li>
 
 
-              
-              <li class="hover:underline  hover:text-[#e76ea5]"><a href="lienHe.php">Liên hệ</a></li>
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="./lienHe.php">Liên hệ</a></li>
             </ul>
           </div>
         </div>
-
-
-
       </section>
     </header>
 
     <body>
-      <section>
-        <div>
-          <img class="absolute" src="../imgs/breadcrumb_img.png" alt="">
-          <div class=" py-10 pl-28 relative">
-            <h2 class="text-white font-bold text-[38px] ">TẤT CẢ SẢN PHẨM</h2>
+    <section>
+        <div
+        class=" mx-auto px-5 h-full w-full bg-no-repeat bg-cover"
+        class="w-full"  style="background-image: url('../imgs/breadcrumb_img.png') ;">
+          <div class=" md:py-10 py-3  relative max-w-7xl mx-auto">
+            <h2 class="text-white font-bold text-[20px] md:text-[38px]  ">TẤT CẢ SẢN PHẨM</h2>
             <span class="text-white text-[17px] "><a href="">Trang chủ</a> <i class="fa fa-angle-right" aria-hidden="true"></i><a href=""> Tất cả sản phẩm</a> </span>
           </div>
         </div>
       </section>
-      <section class="max-w-7xl m-auto py-6 text-[#494747] grid grid-cols-4 ">
-        <div class="w-[287px]  mr-10 col-span-1">
+      <section class="max-w-7xl m-auto py-6 text-[#494747]  grid md:grid-cols-4 px-5">
+        <div class=" md:w-[287px] w-[340px]  md:mr-10 col-span-1 order-2 md:order-1">
           <div class="bg-[#e76ea5] px-2 py-2 ">
             <span class="text-white  "> DANH MỤC SẢN PHẨM</span><br>
           </div>
@@ -135,10 +135,10 @@
           </div>
         </div>
 
-        <div class="col-span-3">
-          <div class="flex justify-between ">
+        <div class="col-span-3 md:order-1">
+          <div class="flex justify-between grid md:grid-cols-2 pl-5 md:pl-0 ">
             <span class="text-[18px] font-bold">Tất cả sản phẩm </span>
-            <div>
+            <div class="text-right">
               <span>Sắp xếp</span>
               <select name="" id="" class="border border-black mx-2  py-2">
                 <option value="0">Mới nhất</option>
@@ -148,7 +148,7 @@
               </select>
             </div>
           </div>
-          <div class="grid grid-cols-3 gap-4 pt-4">
+          <div class="grid md:grid-cols-3 gap-4 pt-4">
             <?php
             include '../Model/db.php';
             $sqlProduct = "select * from product";
@@ -181,7 +181,7 @@
 
 
       <footer class="px-4 md:px-0 border-t-2 ">
-        <div class="max-w-7xl m-auto pt-8 grid grid-cols-4 gap-8">
+        <div class="max-w-7xl m-auto pt-8 grid md:grid-cols-4 gap-8">
           <div class="">
             <a href=""><img class="w-[180px] h-[48px] mb-6" src="../imgs/header_logo.png" alt=""></a>
             <span class=" font-[900] ">Công ty Cổ phần TaeHui Mang thanh xuân đến cho phụ nữ Việt</span>
@@ -220,6 +220,17 @@
           <span>Copyrights © 2022 by Team 6 - FPT Polytechnic</span>
         </div>
       </footer>
+
+      <script>
+        function handClick() {
+    menu = document.getElementById('main-menu')
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none'
+    } else {
+        menu.style.display = 'block'
+    }
+}
+      </script>
   </article>
 </body>
 

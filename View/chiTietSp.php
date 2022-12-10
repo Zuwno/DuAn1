@@ -122,12 +122,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 <body>
   <article>
-    <header class="nav-main box-border">
+  <header class="nav-main box-border">
       <section class="bg-[#e76ea5] ">
         <div class="max-w-7xl m-auto flex justify-between text-white items-center ">
 
-          <span class="py-2">CÔNG TY CỔ PHẦN TAEHUI</span>
-          <div class="flex items-center space-x-3">
+          <span class="py-2 px-20 md:px-0 ">CÔNG TY CỔ PHẦN TAEHUI</span>
+          <div class="flex items-center space-x-3 hidden md:block">
 
             <a href=""><i class="fa fa-envelope px-2 " aria-hidden="true"></i>taehuivietnam@gmail.com </a>
 
@@ -136,24 +136,28 @@ input[type=number]::-webkit-outer-spin-button {
             <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-            <div class="header-search">
-              <a href="" class="docs-creator"><i class="fa fa-search"></i></a>
-            </div>
+            <a href="Model/cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
           </div>
 
         </div>
       </section>
-      <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
-        <div class="flex  justify-between items-center  px-28 bg-white">
-        <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a> 
-          <div>
-            <ul class="flex gap-4 font-bold ">
+      <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg   ">
+        <div class="flex  justify-between items-center  bg-white w-full">
+          <a href="./index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
+          <div class="text-right">
+
+          <button class="md:hidden md:text-right" onclick="handClick()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+            <ul id="main-menu" class=" gap-4 font-bold hidden md:flex items-end text-right     delay-150  ">
               <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
-              <li class="hover:underline  hover:text-[#e76ea5]"><a href="gioithieu.php">Giới thiệu</a></li>
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="./gioithieu.php">Giới thiệu</a></li>
 
               <li>
-                <a href="sanpham.php" class="hover:underline  hover:text-[#e76ea5]">Sản phẩm</a>
-                <ul class="list-sanPham px-4 w-[200px] border border-[#bbb] ">
+                <a href="./sanpham.php" class="hover:underline  hover:text-[#e76ea5]">Sản phẩm</a>
+                <ul class="list-sanPham  px-4 w-[200px]  border border-[#bbb] ">
                   <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Hộp đơn</a></li>
                   <hr>
                   <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Combo 2 hộp</a></li>
@@ -175,14 +179,10 @@ input[type=number]::-webkit-outer-spin-button {
               </li>
 
 
-            
-              <li class="hover:underline  hover:text-[#e76ea5]"><a href="lienHe.php">Liên hệ</a></li>
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="./lienHe.php">Liên hệ</a></li>
             </ul>
           </div>
         </div>
-
-
-
       </section>
     </header>
 
@@ -196,16 +196,16 @@ input[type=number]::-webkit-outer-spin-button {
       $result = $connect->query($sql);
       foreach ($result as $row) {
       ?>
-        <section class="max-w-7xl m-auto">
-          <div class="flex pt-8 pb-4">
+        <section class="max-w-7xl m-auto px-2">
+          <div class="flex pt-8 pb-4 grid md:grid-cols-[40%,45%,15%] ">
             <img class="w-[496px] h-[496px]" src="../imgs/<?php echo $row['img'] ?>" alt="">
-            <div class="">
-              <div class="px-8 text-[#494747]">
-                <a href="">Trang chủ /</a>
-                <a href="">Sản phẩm nổi bật </a>
-                <h2 class="font-bold text-[27px]"><?php echo $row['name'] ?></h2>
+            <div class="grid">
+              <div class="md:px-8 text-[#494747]">
+                <a class="pl-5 md:pl-0" href="">Trang chủ /</a>
+                <a  href="">Sản phẩm nổi bật </a>
+                <h2 class="font-bold text-[27px] pl-5 md:pl-0"><?php echo $row['name'] ?></h2>
                
-                <form action="../View/add_cart.php?add_cart&id=<?=$_GET['id']?>" method="post" class="px-8">
+                <form action="../View/add_cart.php?add_cart&id=<?=$_GET['id']?>" method="post" class="px-4">
                 <div class="py-4">
                   <span>Danh mục : <a href="" class="text-[#e76ea5] "><?php echo $row['id_category'] ?></a></span><br>
                   <div class="flex justify-between py-2"><span>Số lượng : </span><span>Giá Tiền:</span>
@@ -282,7 +282,7 @@ input[type=number]::-webkit-outer-spin-button {
 
     </div>
     </div>
-    <div class="leading-[19px] bg-[#fdf1f6] pl-8 pr-8">
+    <div class="leading-[19px] bg-[#fdf1f6] pl-8 pr-8 hidden md:block">
       <div class="item text-center font-bold border-b border-dashed py-4 border-[#e76ea5]">
         <div class="icon">
           <img src="//theme.hstatic.net/200000557063/1000907375/14/pro_policy_icon_1_thumb.jpg?v=1172" alt="Nguyên liệu nhập khẩu" class="w-[40px] m-auto py-1 ">
@@ -380,7 +380,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 
     <footer class="px-4 md:px-0 border-t-2 ">
-      <div class="max-w-7xl m-auto pt-8 grid grid-cols-4 gap-8">
+      <div class="max-w-7xl m-auto pt-8 grid md:grid-cols-4 gap-8">
         <div class="">
           <a href=""><img class="w-[180px] h-[48px] mb-6" src="../imgs/header_logo.png" alt=""></a>
           <span class=" font-[900] ">Công ty Cổ phần TaeHui Mang thanh xuân đến cho phụ nữ Việt</span>
@@ -500,6 +500,16 @@ input[type=number]::-webkit-outer-spin-button {
       $(".remove").click();
     });
   });
+
+  function handClick() {
+    menu = document.getElementById('main-menu')
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none'
+    } else {
+        menu.style.display = 'block'
+    }
+}
+
 </script>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

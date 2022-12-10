@@ -31,79 +31,81 @@
 <body>
  <article>
  <header class="nav-main box-border">
-    <section class="bg-[#e76ea5] ">
-    <div class="max-w-7xl m-auto flex justify-between text-white items-center ">
-      
-        <span class="py-2">CÔNG TY CỔ PHẦN TAEHUI</span>
-      <div class="flex items-center space-x-3" >
-    
-      <a href=""><i class="fa fa-envelope px-2 " aria-hidden="true"></i>taehuivietnam@gmail.com </a> 
- 
-      <a href=""><i class="fa fa-phone-square px-2" aria-hidden="true"></i>08 6262 1883</a>
-      <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-      <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-      <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
-      <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-      <div class="header-search">
-								<a href="" class="docs-creator"><i class="fa fa-search"></i></a>
-							</div>
-      </div>
-      
-    </div>
-  </section>
-    <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
-  <div class="flex  justify-between items-center  px-28 bg-white">
-  <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
-        <div>
-       <ul class="flex gap-4 font-bold ">
-          <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
-          <li class="hover:underline  hover:text-[#e76ea5]"><a href="gioithieu.php">Giới thiệu</a></li>
+      <section class="bg-[#e76ea5] ">
+        <div class="max-w-7xl m-auto flex justify-between text-white items-center ">
 
-          <li>
-            <a href="sanpham.php"  class="hover:underline  hover:text-[#e76ea5]">Sản phẩm</a> 
-            <ul class="list-sanPham px-4 w-[200px] border border-[#bbb] ">
-        <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Hộp đơn</a></li> <hr>
-        <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Combo 2 hộp</a></li>
-        <li class="text-[#777] hover:text-[#e76ea5] font-[400]  py-2"><a href="">Combo 3 hộp</a></li>
-      </ul>
-      <style>
-        .list-sanPham{
-    background-color:white;
-    position: absolute;
-    display: none;
-    z-index: 1;
-  
-}
-.nav-main ul li:hover .list-sanPham{
-    display: block;
-}
-      </style>
-        </li>
-          
-         
-         
-          <li class="hover:underline  hover:text-[#e76ea5]"><a href="">Liên hệ</a></li>
-      </ul>
-    </div>
-      </div>
-  
-        
-      
-  </section>
-  </header>
+          <span class="py-2 px-20 md:px-0 ">CÔNG TY CỔ PHẦN TAEHUI</span>
+          <div class="flex items-center space-x-3 hidden md:block">
+
+            <a href=""><i class="fa fa-envelope px-2 " aria-hidden="true"></i>taehuivietnam@gmail.com </a>
+
+            <a href=""><i class="fa fa-phone-square px-2" aria-hidden="true"></i>08 6262 1883</a>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+            <a href="Model/cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
+          </div>
+
+        </div>
+      </section>
+      <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg   ">
+        <div class="flex  justify-between items-center px-2 md:px-28 bg-white w-full">
+          <a href="./index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
+          <div class="text-right">
+          <button class="md:hidden md:text-right" onclick="handClick()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+            <ul id="main-menu" class=" gap-4 font-bold hidden md:flex items-end text-right     delay-150  ">
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="./gioithieu.php">Giới thiệu</a></li>
+
+              <li>
+                <a href="./sanpham.php" class="hover:underline  hover:text-[#e76ea5]">Sản phẩm</a>
+                <ul class="list-sanPham  px-4 w-[200px]  border border-[#bbb] ">
+                  <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Hộp đơn</a></li>
+                  <hr>
+                  <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Combo 2 hộp</a></li>
+                  <li class="text-[#777] hover:text-[#e76ea5] font-[400]  py-2"><a href="">Combo 3 hộp</a></li>
+                </ul>
+                <style>
+                  .list-sanPham {
+                    background-color: white;
+                    position: absolute;
+                    display: none;
+                    z-index: 1;
+
+                  }
+
+                  .nav-main ul li:hover .list-sanPham {
+                    display: block;
+                  }
+                </style>
+              </li>
+
+
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="./lienHe.php">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </header>
 
   <body>
-    <section class="">
-        <div>
-            <img class="absolute" src="../imgs/breadcrumb_img.png" alt="">
-            <div class=" py-12 pl-28 relative" >
-            <h2  class="text-white font-bold text-[38px] ">TẤT CẢ SẢN PHẨM</h2>
+  <section class="">
+        <div
+        class=" mx-auto px-5 h-full w-full bg-no-repeat bg-cover"
+        class="w-full"  style="background-image: url('../imgs/breadcrumb_img.png') ;">
+            <div class=" py-3 md:py-10 md:pl-28 relative" >
+            <h2  class="text-white font-bold  text-[20px]  md:text-[38px] ">TẤT CẢ SẢN PHẨM</h2>
             <span class="text-white text-[17px] "><a href="index.php">Trang chủ</a>  <i class="fa fa-angle-right" aria-hidden="true"></i><a href=""> Liên hệ</a> </span>
         </div>
         </div>
     </section>
     <section class="text-[#494747] ">
-      <div class="max-w-6xl m-auto grid grid-cols-2 px-8 gap-4 pb-8 pt-4">
+      <div class="max-w-6xl m-auto grid md:grid-cols-2 px-5 gap-4 pb-8 pt-4">
         <div >
       <h3 class="text-[28px] font-bold">CÔNG TY CỔ PHẦN TAEHUI</h3>
       <div class="flex py-4" >
@@ -244,8 +246,8 @@
       </div>
       <div class="border rounded-xl bg-[#f9dbe9]">
         <div class="">
-        <h2 class="font-bold text-[28px] text-center py-4 ">LIÊN HỆ VỚI CHÚNG TÔI</h2>
-        <form action="" method="post" class="border rounded-xl mx-6 mb-6 px-6 py-6 bg-white" >
+        <h2 class="font-bold text-[20px]  md:text-[28px] text-center py-4 ">LIÊN HỆ VỚI CHÚNG TÔI</h2>
+        <form action="" method="post" class="border rounded-xl mx-3  md:mx-6 mb-3 md:mb-6 px-6 py-6 bg-white" >
          <p class="font-bold text-[18px]"> Họ tên của bạn (*)</p>
          <input class="border rounded-sm w-full px-2 py-1.5 my-2" name="hoten" type="text" placeholder="Họ tên của bạn">
          <p class="font-bold text-[18px]"> Địa chỉ </p>
@@ -288,7 +290,7 @@
    
    
 <footer class="px-4 md:px-0 border-t-2 ">
-<div class="max-w-7xl m-auto pt-8 grid grid-cols-4 gap-8">
+<div class="max-w-7xl m-auto pt-8 grid md:grid-cols-4 gap-8">
   <div class="">
     <a href=""><img class="w-[180px] h-[48px] mb-6" src="../imgs/header_logo.png" alt=""></a>
      <span class=" font-[900] ">Công ty Cổ phần TaeHui Mang thanh xuân đến cho phụ nữ Việt</span>
@@ -327,6 +329,18 @@
     <span>Copyrights © 2022 by Team 6 - FPT Polytechnic</span>
   </div>
 </footer>
+
  </article>
+ 
+ <script>
+        function handClick() {
+    menu = document.getElementById('main-menu')
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none'
+    } else {
+        menu.style.display = 'block'
+    }
+}
+      </script>
 </body>
 </html>
