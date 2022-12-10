@@ -246,14 +246,14 @@
         <div class="">
         <h2 class="font-bold text-[28px] text-center py-4 ">LIÊN HỆ VỚI CHÚNG TÔI</h2>
         <form action="" method="post" class="border rounded-xl mx-6 mb-6 px-6 py-6 bg-white" >
-         <p class="font-bold text-[18px]"> Họ tên của bạn</p>
+         <p class="font-bold text-[18px]"> Họ tên của bạn (*)</p>
          <input class="border rounded-sm w-full px-2 py-1.5 my-2" name="hoten" type="text" placeholder="Họ tên của bạn">
          <p class="font-bold text-[18px]"> Địa chỉ </p>
          <input class="border rounded-sm w-full px-2 py-1.5 my-2" name="diachi" type="text" placeholder="Địa chỉ">
          <p class="font-bold text-[18px]"> Email </p>
-         <input class="border rounded-sm w-full px-2 py-1.5 my-2" type="email " name="email" placeholder="Địa chỉ email của bạn">
-         <p class="font-bold text-[18px]"> Số điện thoại của bạn</p>
-         <input class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" name="phone" placeholder="Số điện thoại của bạn">
+         <input class="border rounded-sm w-full px-2 py-1.5 my-2" type="email " title="vui lòng nhập đúng định dạng email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  name="email" placeholder="Địa chỉ email của bạn">
+         <p class="font-bold text-[18px]"> Số điện thoại của bạn (*)</p>
+         <input class="border rounded-sm w-full px-2 py-1.5 my-2" pattern="[0-9]{10}" title="Vui lòng nhập đúng định dạng điện thoại" type="text" name="phone" placeholder="Số điện thoại của bạn">
          <p class="font-bold text-[18px]"> Nội dung</p>
          <textarea class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung" >
          </textarea>
