@@ -345,7 +345,7 @@
           <div class=" py-4 ">
             <span class="text-[12px] font-[400] text-[#777]" ><?php echo $row['name'] ?> </span><br>
             <a href="./View/chiTietSp.php?id=<?php echo $row['id_product'] ?>" class="text-[#4E657B] hover:text-[#f84689] " style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical; overflow: hidden; "><?php echo $row['detail'] ?></a> <br>
-5
+
             <button class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-sm px-5 py-1.5 font-[600]  bg-[#e76ea5] self-end"><a href="./View/chiTietSp.php?id=<?php echo $row['id_product'] ?>">Tìm hiểu thêm </a></button>
           </div>
         </div>
