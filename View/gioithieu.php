@@ -44,7 +44,7 @@
       <section class="bg-[#e76ea5] ">
         <div class="max-w-7xl m-auto flex justify-between text-white items-center ">
 
-          <span class="py-2">CÔNG TY CỔ PHẦN TAEHUI</span>
+          <span class="py-2 px-20 md:px-0">CÔNG TY CỔ PHẦN TAEHUI</span>
           <div class="flex items-center space-x-3">
 
             <a href=""><i class="fa fa-envelope px-2 " aria-hidden="true"></i>taehuivietnam@gmail.com </a>

@@ -50,8 +50,8 @@
       <section class="bg-[#e76ea5] ">
         <div class="max-w-7xl m-auto flex justify-between text-white items-center ">
 
-          <span class="py-2">CÔNG TY CỔ PHẦN TAEHUI</span>
-          <div class="flex items-center space-x-3">
+          <span class="py-2 px-20 md:px-0 ">CÔNG TY CỔ PHẦN TAEHUI</span>
+          <div class="md:flex items-center space-x-3 hidden ">
 
             <a href=""><i class="fa fa-envelope px-2 " aria-hidden="true"></i>taehuivietnam@gmail.com </a>
 
@@ -65,11 +65,16 @@
 
         </div>
       </section>
-      <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
-        <div class="flex  justify-between items-center  px-28 bg-white">
+      <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg   ">
+        <div class="flex  justify-between items-center px-2 md:px-28 bg-white w-full">
           <a href="./index.php"><img class="w-[180px]" src="imgs/header_logo.png" alt=""></a>
-          <div>
-            <ul class="flex gap-4 font-bold ">
+          <div class="text-right">
+          <button class="md:hidden md:text-right" onclick="handClick()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+            <ul id="main-menu" class=" gap-4 font-bold hidden md:flex items-end text-right      delay-150  ">
               <li class="hover:underline  hover:text-[#e76ea5]"><a href="">Trang chủ</a></li>
               <li class="hover:underline  hover:text-[#e76ea5]"><a href="./View/gioithieu.php">Giới thiệu</a></li>
 
@@ -242,7 +247,7 @@
           }
         </script>
     </section>
-    <section class="max-w-5xl m-auto pt-4 text-center px-4 md:px-0">
+    <section class="max-w-5xl m-auto pt-4 text-center px-4 md:px-0 hidden md:block">
       <div class=" pb-6 md:flex space-x-6">
         <img class="w-[493px] h-[422px] " src="imgs/anh.jpg" alt="">
         <h1 class="text-[#ab0f2f] text-[260%] font-[700] pt-[80px] text-left ">CÔNG <span class="text-[#e9808f] ">NGHỆ</span> ƯU <span class="text-[#e9808f]">VIỆT</span> CHE<span class="text-[#e9808f]">CHU</span>CHUL</h1>
@@ -253,7 +258,7 @@
       <button class="border border-[#a50c46] text-[#a50c46] px-4 py-1.5 font-[600] my-6 hover:bg-[#F8A4C4]"><a href="./View/gioithieu.php">XEM THÊM</a></button>
     </section>
 
-    <section class="max-w-[1570px]  m-auto bg-[rgb(238,238,238)] px-4 md:px-0">
+    <section class="max-w-[1570px]  m-auto bg-[rgb(238,238,238)] px-4 md:px-0 hidden md:block">
       <div class=" max-w-5xl m-auto text-center md:flex md:space-x-8  pt-1">
         <img class="w-[493px] h-[511px]" src="imgs/anh1.jpg" alt="">
         <div class="text-left py-[13%] ">
@@ -284,12 +289,12 @@
         </div>
       </div>
     </section>
-    <section style="    background: url(//theme.hstatic.net/200000557063/1000907375/14/home_aboutus_bg.jpg?v=1171) no-repeat 50% 50%;">
-      <div class="max-w-7xl m-auto flex gap-14 py-16">
+    <section class="px-5" style="    background: url(//theme.hstatic.net/200000557063/1000907375/14/home_aboutus_bg.jpg?v=1171) no-repeat 50% 50%;" >
+      <div class="max-w-7xl m-auto flex gap-14 py-16 grid md:grid-cols-[35%,60%] gap-6 ">
         <div>
-          <iframe width="459" height="258" src="https://www.youtube.com/embed/AYmdvv90j20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="459" class="w-full md:w-[459px]" height="258" src="https://www.youtube.com/embed/AYmdvv90j20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div>
+        <div class="md:pl-10">
           <h2 class="text-[#e76ea5] text-[40px] font-bold">TAEHUI VIỆT NAM</h2>
           <p class="text-[#494747] text-[17px] py-4">Công Ty TaeHui Việt Nam thành lập với mục tiêu chuyên cung cấp các sản phẩm hỗ trợ sức khoẻ và làm đẹp chất lượng, thân thiện môi trường, đồng thời chúng tôi mong muốn TaeHui sẽ là người bạn đồng hành trên hành trình yêu bản thân của phụ nữ Việt. <br>
             TaeHui Việt Nam trân trọng và tôn vinh giá trị mọi nét đẹp của người phụ nữ Việt. Cải tiến không ngừng, tận tâm và chăm sóc khách hàng, lấy khách hàng là trung tâm chính là tôn chỉ và giá trị cốt lõi mà TaeHui luôn duy trì và hướng đến.</p>
@@ -299,25 +304,25 @@
         </div>
       </div>
     </section>
-    <section class="" style="background:rgb(249 222 230 / 50%); ">
+    <section class="px-5" style="background:rgb(249 222 230 / 50%); ">
       <h2 class="font-bold text-center text-[33px] text-[#494747] pt-10 pb-4">TAEHUI CHẤT LƯỢNG LÀM NÊN THƯƠNG HIỆU</h2>
-      <div class="max-w-7xl m-auto grid grid-cols-4 pb-20">
-        <div class="w-[287px] border rounded-b-xl bg-white shadow-lg">
-          <img class=" h-[197px]" src="//theme.hstatic.net/200000557063/1000907375/14/home_reason_icon_1.jpg?v=1172" alt="Sản xuất hiện đại ">
+      <div class="max-w-7xl m-auto grid md:grid-cols-4 pb-20 gap-4">
+        <div class="w-full border rounded-b-xl bg-white shadow-lg">
+          <img class="" src="//theme.hstatic.net/200000557063/1000907375/14/home_reason_icon_1.jpg?v=1172" alt="Sản xuất hiện đại ">
           <h3 class="bg-[#E76EA5] text-white text-center text-[19px] py-1 font-bold">Sản xuất hiện đại</h3>
           <p class="px-2 py-3 text-[17px]">Sản phẩm được nghiên cứu và sản xuất từ nhà sản xuất thực phẩm bảo vệ sức khỏe và mỹ phẩm số 1 Hàn Quốc và đứng top 3 toàn cầu: Cosmax</p>
         </div>
-        <div class="w-[287px] border rounded-b-lg bg-white shadow-lg">
+        <div class="w-full border rounded-b-lg bg-white shadow-lg">
           <img src="//theme.hstatic.net/200000557063/1000907375/14/home_reason_icon_2.jpg?v=1172" alt="Nguyên liệu thiên nhiên">
           <h3 class="bg-[#E76EA5] text-white text-center text-[19px] py-1 font-bold">Sản xuất hiện đại</h3>
           <p class="px-2 py-3 text-[17px]">Sản phẩm được nghiên cứu và sản xuất từ nhà sản xuất thực phẩm bảo vệ sức khỏe và mỹ phẩm số 1 Hàn Quốc và đứng top 3 toàn cầu: Cosmax</p>
         </div>
-        <div class="w-[287px] border rounded-b-lg bg-white shadow-lg">
+        <div class="w-full border rounded-b-lg bg-white shadow-lg">
           <img src="//theme.hstatic.net/200000557063/1000907375/14/home_reason_icon_3.jpg?v=1172" alt="Chăm sóc tận tình">
           <h3 class="bg-[#E76EA5] text-white text-center text-[19px] py-1 font-bold">Sản xuất hiện đại</h3>
           <p class="px-2 py-3 text-[17px]">Sản phẩm được nghiên cứu và sản xuất từ nhà sản xuất thực phẩm bảo vệ sức khỏe và mỹ phẩm số 1 Hàn Quốc và đứng top 3 toàn cầu: Cosmax</p>
         </div>
-        <div class="w-[287px] border rounded-b-lg bg-white shadow-lg">
+        <div class="w-full border rounded-b-lg bg-white shadow-lg">
           <img src="//theme.hstatic.net/200000557063/1000907375/14/home_reason_icon_4.jpg?v=1172" alt="Chứng nhận chất lượng ">
           <h3 class="bg-[#E76EA5] text-white text-center text-[19px] py-1 font-bold">Sản xuất hiện đại</h3>
           <p class="px-2 py-3 text-[17px]">Sản phẩm được nghiên cứu và sản xuất từ nhà sản xuất thực phẩm bảo vệ sức khỏe và mỹ phẩm số 1 Hàn Quốc và đứng top 3 toàn cầu: Cosmax</p>
@@ -340,7 +345,7 @@
           <div class=" py-4 ">
             <span class="text-[12px] font-[400] text-[#777]" ><?php echo $row['name'] ?> </span><br>
             <a href="./View/chiTietSp.php?id=<?php echo $row['id_product'] ?>" class="text-[#4E657B] hover:text-[#f84689] " style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical; overflow: hidden; "><?php echo $row['detail'] ?></a> <br>
-
+5
             <button class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-sm px-5 py-1.5 font-[600]  bg-[#e76ea5] self-end"><a href="./View/chiTietSp.php?id=<?php echo $row['id_product'] ?>">Tìm hiểu thêm </a></button>
           </div>
         </div>
@@ -354,11 +359,12 @@
 
 
 
-    <section style="background:url(//theme.hstatic.net/200000557063/1000907375/14/home_articles_bg.jpg?v=1162) no-repeat left top;" class="pb-20">
+    <section style="background:url(//theme.hstatic.net/200000557063/1000907375/14/home_articles_bg.jpg?v=1162) no-repeat left top;" class="pb-20 px-5">
       <div>
         <h1 class="py-8 text-[33px] text-[#494747] font-bold text-center mt-10">TIN TỨC NỔI BẬT</h1>
         <!-- Create your own class for the containing div -->
-        <div class="slick-carousel  ">
+
+        <div class="slick-carousel  hidden md:block">
           <!-- Inside the containing div, add one div for each slide -->
           <div class="">
             <!-- You can put an image or text inside each slide div -->
@@ -504,6 +510,22 @@
             </div>
           </div>
         </div>
+        <div class="block md:hidden ">
+            <!-- You can put an image or text inside each slide div -->
+            <img class=" " src="imgs/tt1.jpg">
+            <div class="  py-1 ">
+              <div class=" border border-[#e76ea5] rounded-b-lg border-dashed shadow-lg shadow-[#ee9ac0] px-2 py-3">
+                <h3 class="font-bold text-[18px]"> <a href="">Giải Pháp Nhân Đôi Sức Mạnh Ngừa Lão Hoá - Collagen Và Hyaluronic Acid (HA) từ TaeHui</a> </h3>
+                <span class="text-[14px]">
+                  <a href="">Không có món quà nào quý giá hơn việc mang "tuổi thanh xuân" của một người phụ nữ trở lại. Để làn da của chị em được sống trọn vẹn một lần nữa với sự căng tràn, tươi trẻ, các nhà khoa học đã nghiên cứu r... </a>
+                </span>
+                <div>
+                  <a href="" class="text-[#8b8b8a] text-[12px]">03-11-2022</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
       </div>
 
 
@@ -511,7 +533,7 @@
 
 
     <footer class="px-4 md:px-0 border-t-2 ">
-      <div class="max-w-7xl m-auto pt-8 grid grid-cols-4 gap-8">
+      <div class="max-w-7xl m-auto pt-8 grid md:grid-cols-4 gap-8 px-5">
         <div class="">
           <a href=""><img class="w-[180px] h-[48px] mb-6" src="imgs/header_logo.png" alt=""></a>
           <span class=" font-[900] ">Công ty Cổ phần TaeHui Mang thanh xuân đến cho phụ nữ Việt</span>
@@ -561,6 +583,14 @@
       arrows: true, // Adds arrows to sides of slider
       dots: true // Adds the dots on the bottom
     });
+    function handClick() {
+    menu = document.getElementById('main-menu')
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none'
+    } else {
+        menu.style.display = 'block'
+    }
+}
   </script>
 </body>
 
