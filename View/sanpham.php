@@ -46,7 +46,7 @@
             <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-            <a href="Model/cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
+            <a href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
           </div>
 
         </div>

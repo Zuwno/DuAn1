@@ -92,7 +92,7 @@ if (isset($_POST['submit'])) {
                     <div>
                         <ul class="flex gap-4 font-bold ">
                             <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
-                            <li class="hover:underline  hover:text-[#e76ea5]"><a href="gioithieu.html">Giới thiệu</a>
+                            <li class="hover:underline  hover:text-[#e76ea5]"><a href="gioithieu.php">Giới thiệu</a>
                             </li>
 
                             <li>

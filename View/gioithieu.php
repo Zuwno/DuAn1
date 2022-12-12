@@ -54,9 +54,8 @@
             <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-            <div class="header-search">
-              <a href="" class="docs-creator"><i class="fa fa-search"></i></a>
-            </div>
+            <a href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
+            
           </div>
 
         </div>
@@ -67,7 +66,7 @@
           <div>
             <ul class="flex gap-4 font-bold ">
               <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
-              <li class="hover:underline  hover:text-[#e76ea5]"><a href="gioithieu.html">Giới thiệu</a></li>
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="gioithieu.php">Giới thiệu</a></li>
 
               <li>
                 <a href="sanpham.php" class="hover:underline  hover:text-[#e76ea5]">Sản phẩm</a>
