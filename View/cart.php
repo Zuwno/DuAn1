@@ -174,7 +174,7 @@ if (isset($_POST['submit'])) {
                                     <td><?= number_format($item['price']) ?></td>
                                     <td><?= number_format($item['sl']) ?></td>
                                     <td><?= number_format($item['price'] * $item['sl']) ?></td>
-                                    <td><a href="../Model/deletecart.php?id=<?php echo $item['id']?>">Xóa</a></td>
+                                    <td><a href="../Model/deletecart.php?id=<?php echo $item['id'] ?>">Xóa</a></td>
                                     <button></button>
                                 </tr>
                             <?php } ?>
@@ -210,6 +210,11 @@ if (isset($_POST['submit'])) {
                             <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Nội dung:</p>
                             <textarea style="width: 1250px ; margin-left: 15px ;" class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung">
          </textarea>
+                            <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Phương thức thanh toán:</p>
+                            <select style="margin-left: 15px ; width:200px; margin-bottom:20px;" name="thanhtoan" id="" class="border rounded-sm w-full px-2 py-1.5 my-2">
+                                <option value="Tiền mặt">Trả tiền khi nhận hàng</option>
+                            </select>
+                            <br>
                             <input style=" margin-left: 15px ;margin-bottom: 10px ;" type="submit" name="submit" value="Gửi" class="border rounded-md hover:bg-[#e1498e]  bg-[#E76EA5] text-white font-bold px-10 py-1.5">
 
                         </form>
