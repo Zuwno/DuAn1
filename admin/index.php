@@ -148,6 +148,47 @@ if (isset($_SESSION['username'])) {
         include "binhluan/list.php";
         break;
 
+        case 'addtk':
+          if (isset($_POST['btn_insert']) && ($_POST['btn_insert'])) {
+            $tentk = $_POST['tentk'];
+            $pass = $_POST['pass'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $sdt = $_POST['sdt'];
+  
+            $hinh = $_FILES['hinh']['name'];
+            $target_dir = "../imgs/";
+            $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
+            if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+            } else {
+            }
+            insert_taikhoan($tentk,$pass,$email,$name,$sdt,$hinh);
+            $thongbao = "Thêm thành công";
+          }
+        include "taikhoan/add.php";
+        break;
+
+        case 'updatetk':
+          if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+            $id_product = $_POST['id'];
+            $iddm = $_POST['iddm'];
+            $tensp = $_POST['tensp'];
+            $giasp = $_POST['giasp'];
+            $detail = $_POST['detail'];
+  
+            $hinh = $_FILES['hinh']['name'];
+            $target_dir = "../imgs/";
+            $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
+            if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+            } else {
+            }
+            update_sanpham($id_product, $tensp, $giasp, $hinh, $detail, $iddm);
+            $thongbao = "Cập nhật thành công";
+          }
+          $listdanhmuc = loadall_danhmuc();
+          $listsanpham = loadall_sanpham("", 0);
+          include "sanpham/list.php";
+          break;
 
       case 'dskh':
         $list_taikhoan = loadall_taikhoan();

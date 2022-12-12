@@ -5,6 +5,9 @@
         return $list_taikhoan;
     }
 
-
+    function insert_taikhoan($tentk,$pass,$email,$name,$sdt,$hinh){
+        $sql="insert into account(username,password,name,img,email,phone ) values('$tentk','$pass','$name','$hinh','$email','$sdt')";
+        pdo_execute($sql);
+    }
 
 ?>
