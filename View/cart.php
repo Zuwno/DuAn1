@@ -1,7 +1,10 @@
 <?php
 require "../Model/pdo.php";
 session_start();
-$id_product = $_GET['id'];
+if(!empty($_GET['id'])){
+    $id_product = $_GET['id'];
+}
+
 if (!empty($_SESSION["cart"])) {
     $cart = $_SESSION["cart"];
 }
