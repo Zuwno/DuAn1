@@ -200,28 +200,34 @@ if (isset($_POST['submit'])) {
 
                 <div class="border rounded-xl bg-[#f9dbe9]">
                     <div class="">
-                        <h2 class="font-bold text-[28px] text-center py-4 ">Thông tin nhận hàng</h2>
+<?php 
+    if (!empty($_SESSION["cart"])) {
+     
+?>
+<h2 class="font-bold text-[28px] text-center py-4 ">Thông tin nhận hàng</h2>
 
-                        <form action="" method="post" class="border rounded-xl mx-6 mb-6 px-6 py-6 bg-white">
-                            <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Họ tên (*):</p>
-                            <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="hoten" require type="text" placeholder="Họ tên của bạn">
-                            <p style="margin-left: 15px ;  " class="font-bold text-[18px]"> Địa chỉ (*): </p>
-                            <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="diachi" require type="text" placeholder="Địa chỉ">
-                            <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Email: </p>
-                            <input title="Định dạng Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="email " name="email" placeholder="Địa chỉ email của bạn">
-                            <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Số điện thoại (*):</p>
-                            <input title="Định dạng số điện thoại" pattern="[0-9]{10}" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" require name="phone" placeholder="Số điện thoại của bạn">
-                            <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Nội dung:</p>
-                            <textarea style="width: 1250px ; margin-left: 15px ;" class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung">
-         </textarea>
-                            <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Phương thức thanh toán:</p>
-                            <select style="margin-left: 15px ; width:200px; margin-bottom:20px;" name="thanhtoan" id="" class="border rounded-sm w-full px-2 py-1.5 my-2">
-                                <option value="Tiền mặt">Trả tiền khi nhận hàng</option>
-                            </select>
-                            <br>
-                            <input style=" margin-left: 15px ;margin-bottom: 10px ;" type="submit" name="submit" value="Gửi" class="border rounded-md hover:bg-[#e1498e]  bg-[#E76EA5] text-white font-bold px-10 py-1.5">
+<form action="" method="post" class="border rounded-xl mx-6 mb-6 px-6 py-6 bg-white">
+    <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Họ tên (*):</p>
+    <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="hoten" require type="text" placeholder="Họ tên của bạn">
+    <p style="margin-left: 15px ;  " class="font-bold text-[18px]"> Địa chỉ (*): </p>
+    <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="diachi" require type="text" placeholder="Địa chỉ">
+    <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Email: </p>
+    <input title="Định dạng Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="email " name="email" placeholder="Địa chỉ email của bạn">
+    <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Số điện thoại (*):</p>
+    <input title="Định dạng số điện thoại" pattern="[0-9]{10}" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" require name="phone" placeholder="Số điện thoại của bạn">
+    <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Nội dung:</p>
+    <textarea style="width: 1250px ; margin-left: 15px ;" class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung">
+</textarea>
+    <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Phương thức thanh toán:</p>
+    <select style="margin-left: 15px ; width:200px; margin-bottom:20px;" name="thanhtoan" id="" class="border rounded-sm w-full px-2 py-1.5 my-2">
+        <option value="Tiền mặt">Trả tiền khi nhận hàng</option>
+    </select>
+    <br>
+    <input style=" margin-left: 15px ;margin-bottom: 10px ;" type="submit" name="submit" value="Gửi" class="border rounded-md hover:bg-[#e1498e]  bg-[#E76EA5] text-white font-bold px-10 py-1.5">
 
-                        </form>
+</form>
+
+<?php }?>
                         <?php
                         include '../Model/db.php';
                         if (isset($_POST['submit'])) {
