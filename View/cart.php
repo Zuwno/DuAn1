@@ -14,8 +14,9 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $content = $_POST['noidung'];
+    $thanhtoan = $_POST['thanhtoan'];
     $total_all = $_POST['total_all'];
-    $sql = "INSERT INTO bill (bill_address, bill_email, bill_tel, bill_pttt, total_all, receive_name, bill_status) VALUES ('$address', '$email','$phone', '$content','$total_all','$name','Đang xác nhận')";
+    $sql = "INSERT INTO bill (bill_address, bill_email, bill_tel, bill_pttt, total_all, receive_name, bill_status, thanhtoan) VALUES ('$address', '$email','$phone', '$content','$total_all','$name','Đang xác nhận','$thanhtoan')";
     $query = pdo_execute($sql);
     if (!empty($sql)) {
         $sql = "SELECT * from bill";
