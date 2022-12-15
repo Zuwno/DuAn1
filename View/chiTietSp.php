@@ -143,7 +143,7 @@ input[type=number]::-webkit-outer-spin-button {
       </section>
       <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg   ">
         <div class="flex  justify-between items-center  bg-white w-full">
-          <a href="./index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
+          <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
           <div class="text-right">
 
           <button class="md:hidden md:text-right" onclick="handClick()">

@@ -51,7 +51,7 @@
       </section>
       <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg   ">
         <div class="flex  justify-between items-center px-2 md:px-28 bg-white w-full">
-          <a href="./index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
+          <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
           <div class="text-right">
           <button class="md:hidden md:text-right" onclick="handClick()">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
