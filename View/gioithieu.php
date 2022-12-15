@@ -34,7 +34,7 @@
     }
 
     /* The width of each slide */
-    .slick-slide {}
+    
 
     /* Color of the arrows */
     .slick-next::before,

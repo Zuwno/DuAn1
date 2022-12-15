@@ -143,7 +143,7 @@ input[type=number]::-webkit-outer-spin-button {
       </section>
       <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg   ">
         <div class="flex  justify-between items-center  bg-white w-full">
-          <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
+          <a href="../index.php"><img class="w-[180px] ml-[112px]" src="../imgs/header_logo.png" alt=""></a>
           <div class="text-right">
 
           <button class="md:hidden md:text-right" onclick="handClick()">
@@ -151,7 +151,7 @@ input[type=number]::-webkit-outer-spin-button {
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </button>
-            <ul id="main-menu" class=" gap-4 font-bold hidden md:flex items-end text-right     delay-150  ">
+            <ul id="main-menu" class=" pr-[112px] gap-3 font-bold hidden md:flex items-end text-right     delay-150  ">
               <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
               <li class="hover:underline  hover:text-[#e76ea5]"><a href="./gioithieu.php">Giới thiệu</a></li>
 
