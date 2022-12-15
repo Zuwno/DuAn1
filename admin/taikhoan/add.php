@@ -1,7 +1,7 @@
 <div class="bg-[#F0EFEF]  border">
         <section class="bg-white mt-10">
             <div class="pl-[24%] m-10 ">
-                <h1 class="text-[25px] py-10 text-gray-600 font-semibold border-black border-b-2">SỬA SẢN PHẨM</h1>
+                <h1 class="text-[25px] py-10 text-gray-600 font-semibold border-black border-b-2">THÊM TÀI KHOẢN ADMIN</h1>
 
             
                 <form action="index.php?act=addtk" method="POST" enctype="multipart/form-data" onsubmit="return validate()">

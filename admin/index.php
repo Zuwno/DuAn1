@@ -150,6 +150,7 @@ if (isset($_SESSION['username'])) {
 
         case 'addtk':
           if (isset($_POST['btn_insert']) && ($_POST['btn_insert'])) {
+            
             $tentk = $_POST['tentk'];
             $pass = $_POST['pass'];
             $name = $_POST['name'];
@@ -168,13 +169,22 @@ if (isset($_SESSION['username'])) {
         include "taikhoan/add.php";
         break;
 
+        case 'suatk':
+          if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+            $taikhoan = loadone_taikhoan($_GET['id']);
+          }
+          
+          include "taikhoan/update.php";
+          break;
+
         case 'updatetk':
           if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-            $id_product = $_POST['id'];
-            $iddm = $_POST['iddm'];
-            $tensp = $_POST['tensp'];
-            $giasp = $_POST['giasp'];
-            $detail = $_POST['detail'];
+            $id_account = $_POST['id'];
+            $tentk = $_POST['tentk'];
+            $pass = $_POST['pass'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $sdt = $_POST['sdt'];
   
             $hinh = $_FILES['hinh']['name'];
             $target_dir = "../imgs/";
@@ -182,13 +192,21 @@ if (isset($_SESSION['username'])) {
             if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
             } else {
             }
-            update_sanpham($id_product, $tensp, $giasp, $hinh, $detail, $iddm);
+            update_taikhoan($id_account,$tentk,$pass,$hinh,$name,$email,$sdt);
             $thongbao = "Cập nhật thành công";
           }
-          $listdanhmuc = loadall_danhmuc();
-          $listsanpham = loadall_sanpham("", 0);
-          include "sanpham/list.php";
+          
+          $list_taikhoan = loadall_taikhoan();
+          include "taikhoan/list.php";
           break;
+
+          case 'xoatk':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+              delete_taikhoan($_GET['id']);
+            }
+            $list_taikhoan = loadall_taikhoan();
+            include "taikhoan/list.php";
+            break;
 
       case 'dskh':
         $list_taikhoan = loadall_taikhoan();

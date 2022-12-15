@@ -19,8 +19,8 @@
 <?php 
     foreach ($list_taikhoan as $taikhoan) :
         extract($taikhoan);  
-        $suatk="index.php?act=suasp&id=".$id_account ;
-        $xoatk="index.php?act=xoasp&id=".$id_account ; 
+        $suatk="index.php?act=suatk&id=".$id_account;
+        $xoatk="index.php?act=xoatk&id=".$id_account; 
         $hinhpath="../imgs/".$img;
 
         if(is_file($hinhpath)){

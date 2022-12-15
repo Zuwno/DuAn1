@@ -153,13 +153,7 @@
                                 document.getElementById('giasp_error').innerHTML=''
                             }
 
-                            if(hinh.value==''){
-                                document.getElementById('hinh_error').innerHTML='Bạn cần chọn hình cho sản phẩm'
-                                flag= false;
-                            }
-                            else{
-                                document.getElementById('hinh_error').innerHTML=''
-                            }
+                            
 
 
 
