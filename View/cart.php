@@ -31,6 +31,29 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
+<?php
+                        include '../Model/db.php';
+                        if (isset($_POST['submit'])) {
+                            $fullname = $_POST['hoten'];
+                            $diachi = $_POST['diachi'];
+                            $email = $_POST['email'];
+                            $phone = $_POST['phone'];
+                            $noidung = $_POST['noidung'];
+                            $sql_insert = "insert into servicecontact values(null,'$fullname','$diachi','$email','$phone','$noidung')";
+                            if ($fullname == '' || $diachi == '' || $phone == '') {
+                                echo "<script>alert('Vui lòng không để trống thông tin')</script>";
+                            } else {
+                                $sql = $connect->prepare($sql_insert);
+                                $kq = $connect->prepare($sql_insert);
+                                if ($kq->execute()) {
+                                    // echo "<script>alert('Gửi thông tin thành công, chúng tôi sẽ sớm liên hệ')</script>";
+                                    header("Location: thongbaocart.php");
+                                } else {
+                                    echo "<script>alert('Gửi thông tin thất bại, vui lòng thử lại')</script>";
+                                }
+                            }
+                        }
+                        ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -228,28 +251,7 @@ if (isset($_POST['submit'])) {
 </form>
 
 <?php }?>
-                        <?php
-                        include '../Model/db.php';
-                        if (isset($_POST['submit'])) {
-                            $fullname = $_POST['hoten'];
-                            $diachi = $_POST['diachi'];
-                            $email = $_POST['email'];
-                            $phone = $_POST['phone'];
-                            $noidung = $_POST['noidung'];
-                            $sql_insert = "insert into servicecontact values(null,'$fullname','$diachi','$email','$phone','$noidung')";
-                            if ($fullname == '' || $diachi == '' || $phone == '') {
-                                echo "<script>alert('Vui lòng không để trống thông tin')</script>";
-                            } else {
-                                $sql = $connect->prepare($sql_insert);
-                                $kq = $connect->prepare($sql_insert);
-                                if ($kq->execute()) {
-                                    echo "<script>alert('Gửi thông tin thành công, chúng tôi sẽ sớm liên hệ')</script>";
-                                } else {
-                                    echo "<script>alert('Gửi thông tin thất bại, vui lòng thử lại')</script>";
-                                }
-                            }
-                        }
-                        ?>
+                        
 
                     </div>
                 </div>
