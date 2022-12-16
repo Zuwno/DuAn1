@@ -460,6 +460,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 
     $(".qt-plus").click(function() {
+      if(parseInt($(".qt").val())<10)
       $(".qt").val(parseInt($(".qt").val())+1)
       changeVal();
 
