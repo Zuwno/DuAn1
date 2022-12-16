@@ -7,6 +7,7 @@ if (isset($_SESSION['username'])) {
   include "../model/taikhoan.php";
   include "../model/binhluan.php";
   include "../model/add_cart.php";
+  include "../model/lienhe.php";
   include "header.php";
 
   //Controler
@@ -276,8 +277,18 @@ if (isset($_SESSION['username'])) {
             
             include "bill/bill_detail.php";
             break;
+          
+            case 'dslh':
+              include "lienhe/list.php";
+              break;
 
-
+              case 'xoalh':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                  delete_lienhe($_GET['id']);
+                }
+               
+                include "lienhe/list.php";
+                break;
         
     }
   } else
