@@ -106,6 +106,14 @@
           </div>
         </div>
       </section>
+      <section>
+
+        <form method="post" action="" class="ml-[1030px] mt-4">
+          <input name="search_value" style="border: 1px solid; border-radius: 5px;" type="text">
+          <input name="search" class="bg-[#e76ea5] text-white px-3 py-[2px] " style="border: 2px solid; border-radius: 5px;" type="submit" value="Tìm kiếm" >
+        </form>
+
+      </section>
       <section class="max-w-7xl m-auto py-6 text-[#494747]  grid md:grid-cols-4 px-5">
         <div class=" md:w-[287px] w-[340px]  md:mr-10 col-span-1 order-2 md:order-1">
           <div class="bg-[#e76ea5] px-2 py-2 ">
@@ -141,6 +149,12 @@
             <?php
             include '../Model/db.php';
             $sqlProduct = "select * from product";
+            
+            if(isset($_POST['search']))
+            {
+              $s = $_POST['search_value'];
+              $sqlProduct = "select *  from product where name like '%$s%'";
+            }
             $resultt = $connect->query($sqlProduct);
             foreach ($resultt as $row) {
             ?>
