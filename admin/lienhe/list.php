@@ -1,7 +1,7 @@
 <div class="bg-[#F0EFEF]  border">
         <section class="bg-white mt-10">
             <div class="pl-[24%] m-10 ">
-                <h1 class="text-[25px] py-10 text-gray-600 font-semibold border-black border-b-2">DANH SÁCH ĐƠN HÀNG</h1>
+                <h1 class="text-[25px] py-10 text-gray-600 font-semibold border-black border-b-2">DANH SÁCH LIÊN HỆ</h1>
                 <table class=" my-5 w-full">
                     <tr class="bg-[#1B4643] text-white ">
                         <td class="py-2 px-5">ID</td>

@@ -36,7 +36,7 @@
                 <td><?=$name?></td>
                 <td><?=$hinh?></td>
                 <td><?=$email?></td>
-                <td>+84<?=$phone?></td>
+                <td><?=$phone?></td>
                 <td>
                     <a href="<?=$suatk?>" class="bg-blue-400 text-white px-3 py-2 rounded-md hover:bg-gray-400 ">Sửa</a>
                     <a  onclick="return confirm('Bạn có muốn xóa tài khoản admin này không')" href="<?=$xoatk?>" class="bg-red-400 text-white px-3 py-2 rounded-md hover:bg-gray-400">Xóa</a>
