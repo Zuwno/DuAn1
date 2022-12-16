@@ -136,18 +136,7 @@
         </div>
 
         <div class="col-span-3 md:order-1">
-          <div class="flex justify-between grid md:grid-cols-2 pl-5 md:pl-0 ">
-            <span class="text-[18px] font-bold">Tất cả sản phẩm </span>
-            <div class="text-right">
-              <span>Sắp xếp</span>
-              <select name="" id="" class="border border-black mx-2  py-2">
-                <option value="0">Mới nhất</option>
-                <option value="">Cũ nhất </option>
-                <option value="">Sắp xếp chữ cái từ A-Z</option>
-                <option value="">Sắp xếp chữ cái từ Z-A</option>
-              </select>
-            </div>
-          </div>
+          
           <div class="grid md:grid-cols-3 gap-4 pt-4">
             <?php
             include '../Model/db.php';
