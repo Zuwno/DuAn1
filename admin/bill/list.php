@@ -7,9 +7,6 @@
                         <td class="py-2 px-5">ID</td>
                         <td>Khách hàng</td>
                         <td>Địa chỉ</td>
-                        <td>SĐT</td>
-                        
-                        
                         <td>Tổng tiền</td>
                         <td>Ngày đặt hàng</td>
                         <td>Tình trạng</td>
@@ -27,13 +24,14 @@
 
 ?>
 
-                    <tr >
+                    <tr class="border-b-2 border-gray-300">
                         <td class="p-4 px-5"><?=$id_bill ?></td>
-                        <td><?=$receive_name?></td>
+                        <td>
+                            <?=$receive_name?> <br/>
+                            <?=$bill_tel?> <br/>
+                            <?=$bill_email?>
+                        </td>
                         <td><?=$bill_address?></td>
-                        <td><?=$bill_tel?></td>
-                        
-                        
                         <td><?=$total_all?> VNĐ</td>
                         <td><?=$bill_date?></td>
                         <td class="text-green-500"><?=$bill_status?></td>
