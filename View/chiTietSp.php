@@ -220,9 +220,9 @@ input[type=number]::-webkit-outer-spin-button {
                             $_SESSION['cart'][$id]['sl'] * $row['price'];
                           } ?>
                         </h2>
-                        
-                        <input style="width: 60px ;" name="quantity" type="number"  min="1" max="10"  class="qt" value="1"></input>
-                        
+                        <div class="qt-minus">-</div>
+                        <input style="width: 60px ;" name="quantity" type="number" onchane="changeVal()"  min="1" max="10"  class="qt" value="1"></input>
+                        <div class="qt-plus">+</div>
                         <h2 style="color: red ; font-size: 20px;" class="price">
                          <?=$row ['price']?>đ 
                         </h2>
@@ -424,15 +424,13 @@ input[type=number]::-webkit-outer-spin-button {
 <script>
   var check = false;
 
-  function changeVal(el) {
-    var price = parseFloat(el.parent().children(".price").html());
-    var qt = parseFloat(el.parent().children(".qt").html());
+  function changeVal() {
+    var price = parseFloat($(".price").text());
+    var qt = parseFloat($(".qt").val());
 
     var eq = Math.round(price * qt * 100) / 100;
 
-    el.parent().children(".full-price").html(eq + "tr");
-
-    changeTotal();
+    $(".full-price").text(eq);
   }
 
   function changeTotal() {
@@ -462,33 +460,18 @@ input[type=number]::-webkit-outer-spin-button {
 
 
     $(".qt-plus").click(function() {
-      $(this).parent().children(".full-price").addClass("added");
-      $(this).parent().children(".qt").html(parseInt($(this).parent().children(".qt").html()) + 1);
+      $(".qt").val(parseInt($(".qt").val())+1)
+      changeVal();
 
 
-
-      var el = $(this);
-      window.setTimeout(function() {
-        el.parent().children(".full-price").removeClass("added");
-        changeVal(el);
-      }, 150);
+     
     });
 
     $(".qt-minus").click(function() {
-
-      child = $(this).parent().children(".qt");
-
-      if (parseInt(child.html()) > 1) {
-        child.html(parseInt(child.html()) - 1);
+      if(parseInt($(".qt").val())>1){
+        $(".qt").val(parseInt($(".qt").val())-1)
+        changeVal();
       }
-
-      $(this).parent().children(".full-price").addClass("minused");
-
-      var el = $(this);
-      window.setTimeout(function() {
-        el.parent().children(".full-price").removeClass("minused");
-        changeVal(el);
-      }, 150);
     });
 
     window.setTimeout(function() {
