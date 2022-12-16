@@ -339,9 +339,9 @@ input[type=number]::-webkit-outer-spin-button {
       <div class=" border-2 border-t-[#e76ea5] py-8 px-4 text-[17px] mb-8">
       <form action="" method="post" style="margin-bottom: 20px ;">
         <label for="" class="pr-[24.5px]  my-4  ">Họ tên:</label>
-        <input type="text" class="bg-[#D3D3D3] px-4 py-1 my-1 w-[200px]" name="Hoten" ><br>
+        <input type="text" class="bg-[#E1E5EB] px-4 py-1 rounded-lg my-1 w-[200px]] px-4 py-1 my-1 w-[200px]" name="Hoten" ><br>
         <label for="" class="pr-1">Bình luận:</label>
-        <input type="text" class="bg-[#D3D3D3] px-4 py-1 w-[200px]" name="Binhluan" >
+        <input type="text" class="bg-[#E1E5EB] rounded px-4 py-1 w-[200px]" name="Binhluan" >
         <input class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-sm px-4 mx-1 py-1 font-[600] bg-[#e76ea5]" type="submit" name="submit_comment" >
         </form>
         <hr>

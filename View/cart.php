@@ -239,7 +239,7 @@ if (isset($_POST['submit'])) {
                     </tfoot>
                 </table>
 
-                <div class="border rounded-xl bg-[#f9dbe9]">
+                <div class="border rounded-xl ">
                     <div class="">
 <?php 
     if (!empty($_SESSION["cart"])) {
@@ -254,18 +254,18 @@ if (isset($_POST['submit'])) {
 <form action="" method="post" class="border rounded-xl mx-6 mb-6 px-6 py-6 bg-white">
         <h2 class="font-bold text-[28px] text-center py-4 ">Thông tin nhận hàng</h2>
     <p class="pt-3 pb-2 mx-10"> Họ tên (*):</p>
-    <input class=" rounded-xl w-[80%] px-5 py-2  mx-10 " name="hoten" require type="text" placeholder="Họ tên của bạn">
+    <input class=" bg-[#E1E5EB]  rounded-xl w-[80%] px-5 py-2  mx-10 " name="hoten" require type="text" placeholder="Họ tên của bạn">
     <p class="pt-3 pb-2 mx-10"> Địa chỉ (*): </p>
-    <input class="rounded-xl w-[80%] px-5 py-2  mx-10" name="diachi" require type="text" placeholder="Địa chỉ">
+    <input class="rounded-xl bg-[#E1E5EB] w-[80%] px-5 py-2  mx-10" name="diachi" require type="text" placeholder="Địa chỉ">
     <p class="pt-3 pb-2 mx-10"> Email: </p>
-    <input title="Định dạng Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="rounded-xl w-[80%] px-5 py-2  mx-10" type="email " name="email" placeholder="Địa chỉ email của bạn">
+    <input title="Định dạng Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="rounded-xl bg-[#E1E5EB] w-[80%] px-5 py-2  mx-10" type="email " name="email" placeholder="Địa chỉ email của bạn">
     <p class="pt-3 pb-2 mx-10"> Số điện thoại (*):</p>
-    <input title="Định dạng số điện thoại" pattern="[0-9]{10}" class="rounded-xl w-[80%] px-5 py-2  mx-10" type="text" require name="phone" placeholder="Số điện thoại của bạn">
+    <input title="Định dạng số điện thoại" pattern="[0-9]{10}" class="rounded-xl w-[80%] bg-[#E1E5EB] px-5 py-2  mx-10" type="text" require name="phone" placeholder="Số điện thoại của bạn">
     <p class="pt-3 pb-2 mx-10"> Nội dung:</p>
-    <textarea class="rounded-xl w-[80%]  px-5 py-2  mx-10" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung">
+    <textarea class="rounded-xl w-[80%] bg-[#E1E5EB] px-5 py-2  mx-10" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung">
 </textarea>
     <p style="margin-left: 40px ; " class="font-bold text-[18px]"> Phương thức thanh toán:</p>
-    <select style="margin-left: 40px ; width:200px; margin-bottom:20px;" name="thanhtoan" id="" class="border rounded-sm  px-2 py-1.5 my-2">
+    <select style="margin-left: 40px ; width:200px; margin-bottom:20px;" name="thanhtoan" id="" class="border  rounded-sm  px-2 py-1.5 my-2">
         <option value="Tiền mặt">Trả tiền khi nhận hàng</option>
     </select>
     <br>
