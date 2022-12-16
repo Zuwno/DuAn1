@@ -87,104 +87,122 @@ if (isset($_POST['submit'])) {
         p {
             font-size: 18px;
         }
+        html,
+      body {
+        height: 100%;
+      }
+    
+      @media (min-width: 640px) {
+        table {
+          display: inline-table !important;
+        }
+    
+        thead tr:not(:first-child) {
+          display: none;
+        }
+      }
+    
+      td:not(:last-child) {
+        border-bottom: 0;
+      }
+    
+      th:not(:last-child) {
+        border-bottom: 2px solid rgba(0, 0, 0, .1);
+      }
     </style>
 </head>
 
 <body>
     <article class="">
-        <header class="nav-main box-border">
-            <section class="bg-[#e76ea5] ">
-                <div class="max-w-7xl m-auto flex justify-between text-white items-center ">
+    <header class="nav-main box-border">
+      <section class="bg-[#e76ea5] ">
+        <div class="max-w-7xl m-auto flex justify-between text-white items-center ">
 
-                    <span class="py-2">CÔNG TY CỔ PHẦN TAEHUI</span>
-                    <div class="flex items-center space-x-3">
+          <span class="py-2 px-20 md:px-0 ">CÔNG TY CỔ PHẦN TAEHUI</span>
+          <div class="flex items-center space-x-3 hidden md:block">
 
-                        <a href=""><i class="fa fa-envelope px-2 " aria-hidden="true"></i>taehuivietnam@gmail.com </a>
+            <a href=""><i class="fa fa-envelope px-2 " aria-hidden="true"></i>taehuivietnam@gmail.com </a>
 
-                        <a href=""><i class="fa fa-phone-square px-2" aria-hidden="true"></i>08 6262 1883</a>
-                        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-                        <div class="header-search">
-                            <a href="" class="docs-creator"><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
+            <a href=""><i class="fa fa-phone-square px-2" aria-hidden="true"></i>08 6262 1883</a>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+            <a href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></i></a>
+          </div>
 
-                </div>
-            </section>
-            <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg  ">
-                <div class="flex  justify-between items-center  px-28 bg-white">
-                    <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
-                    <div>
-                        <ul class="flex gap-4 font-bold ">
-                            <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
-                            <li class="hover:underline  hover:text-[#e76ea5]"><a href="gioithieu.php">Giới thiệu</a>
-                            </li>
+        </div>
+      </section>
+      <section class=" max-w-8xl m-auto  py-2 relative z-[999] shadow-lg   ">
+        <div class="flex  justify-between items-center px-2 md:px-28 bg-white w-full">
+          <a href="../index.php"><img class="w-[180px]" src="../imgs/header_logo.png" alt=""></a>
+          <div class="text-right">
+          <button class="md:hidden md:text-right" onclick="handClick()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+            <ul id="main-menu" class=" gap-4 font-bold hidden md:flex items-end text-right     delay-150  ">
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="../index.php">Trang chủ</a></li>
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="./gioithieu.php">Giới thiệu</a></li>
 
-                            <li>
-                                <a href="sanpham.php" class="hover:underline  hover:text-[#e76ea5]">Sản phẩm</a>
-                                <ul class="list-sanPham px-4 w-[200px] border border-[#bbb] ">
-                                    <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Hộp đơn</a></li>
-                                    <hr>
-                                    <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Combo 2 hộp</a>
-                                    </li>
-                                    <li class="text-[#777] hover:text-[#e76ea5] font-[400]  py-2"><a href="">Combo 3
-                                            hộp</a></li>
-                                </ul>
-                                <style>
-                                    .list-sanPham {
-                                        background-color: white;
-                                        position: absolute;
-                                        display: none;
-                                        z-index: 1;
+              <li>
+                <a href="./sanpham.php" class="hover:underline  hover:text-[#e76ea5]">Sản phẩm</a>
+                <ul class="list-sanPham  px-4 w-[200px]  border border-[#bbb] ">
+                  <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Hộp đơn</a></li>
+                  <hr>
+                  <li class="text-[#777] hover:text-[#e76ea5] font-[400] border-b-2 py-2"><a href="">Combo 2 hộp</a></li>
+                  <li class="text-[#777] hover:text-[#e76ea5] font-[400]  py-2"><a href="">Combo 3 hộp</a></li>
+                </ul>
+                <style>
+                  .list-sanPham {
+                    background-color: white;
+                    position: absolute;
+                    display: none;
+                    z-index: 1;
 
-                                    }
+                  }
 
-                                    .nav-main ul li:hover .list-sanPham {
-                                        display: block;
-                                    }
-                                </style>
-                            </li>
-
-
-
-                            <li class="hover:underline  hover:text-[#e76ea5]"><a href="lienHe.php">Liên hệ</a></li>
-                        </ul>
-                    </div>
-                </div>
+                  .nav-main ul li:hover .list-sanPham {
+                    display: block;
+                  }
+                </style>
+              </li>
 
 
-
-            </section>
-            <section class="">
-                <div>
-                    <img class="absolute" src="../imgs/breadcrumb_img.png" alt="">
-                    <div class=" py-12 pl-28 relative">
-                        <h2 class="text-white font-bold text-[38px] ">GIỎ HÀNG CỦA BẠN</h2>
-                        <span class="text-white text-[17px] "><a href="index.php">Trang chủ</a> <i class="fa fa-angle-right" aria-hidden="true"></i><a href=""> Giỏ hàng</a> </span>
-                    </div>
-                </div>
-            </section>
-        </header>
-
+              <li class="hover:underline  hover:text-[#e76ea5]"><a href="./lienHe.php">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </header>
+        <section class="">
+        <div
+        class=" mx-auto px-5 h-full w-full bg-no-repeat bg-cover"
+        class="w-full"  style="background-image: url('../imgs/breadcrumb_img.png') ;">
+            <div class=" py-3 md:py-10 md:pl-28 relative" >
+            <h2  class="text-white font-bold  text-[20px]  md:text-[38px] ">TẤT CẢ SẢN PHẨM</h2>
+            <span class="text-white text-[17px] "><a href="index.php">Trang chủ</a>  <i class="fa fa-angle-right" aria-hidden="true"></i><a href=""> Liên hệ</a> </span>
+        </div>
+        </div>
+    </section>
         <div class="max-w-7xl mx-auto py-10">
             <h1 class="bg-[#e76ea5] text-[25px] p-5 rounded-lg text-white font-sans font-semibold">GIỎ HÀNG</h1>
 
             <form action="" method="POST">
-                <table class="my-8 w-full ">
+                <table class="my-8 w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
                     <thead class="">
-                        <tr class="text-white text-lg bg-[#e76ea5]">
-                            <td class="py-3 pl-5">Hình ảnh</td>
-                            <td>Tên sản phẩm</td>
-                            <td>Giá sản phẩm</td>
-                            <td>Số lượng</td>
-                            <td>Thành tiền</td>
-                            <td>Thao tác</td>
+                        <tr class="text-white text-lg bg-[#e76ea5] flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                            <td class="p-3 pl-5 py-10 md:p-3  pl-5">Hình ảnh</td>
+                            <td class="p-3 py-14 md:p-3  text-left">Tên sản phẩm</td>
+                            <td class="p-3  md:p-3   text-left">Giá sản phẩm</td>
+                            <td class="p-3 md:p-3  text-left">Số lượng</td>
+                            <td class="p-3  md:p-3  text-left">Thành tiền</td>
+                            <td class="p-3  md:p-3  text-left">Thao tác</td>
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody class="flex-1 sm:flex-none">
                         <?php
                         if (isset($_SESSION['cart'])) {
                         ?>
@@ -193,15 +211,15 @@ if (isset($_POST['submit'])) {
                             foreach ($_SESSION['cart'] as $key => $item) {
                                 $total += $item['price'] * $item['sl'];
                             ?>
-                                <tr class="text-md font-semibold border-b p-2">
-                                    <td class="mr-2">
+                                <tr class="text-md font-semibold border-b p-3 flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                                    <td class="mr-2  text-left" >
                                         <img src="http://localhost/DA1/imgs/<?= $item['image'] ?>" alt="" style="width: 150px;height: 150px">
                                     </td>
-                                    <td><?= $item['name_product'] ?></td>
-                                    <td><?= number_format($item['price']) ?></td>
-                                    <td><?= number_format($item['sl']) ?></td>
-                                    <td><?= number_format($item['price'] * $item['sl']) ?></td>
-                                    <td><a href="../Model/deletecart.php?id=<?php echo $item['id'] ?>">Xóa</a></td>
+                                    <td class=" pb-5 md:p-3  "><?= $item['name_product'] ?></td>
+                                    <td class="py-3  md:p-3  "><?= number_format($item['price']) ?></td>
+                                    <td class="py-3 md:p-3  "><?= number_format($item['sl']) ?></td>
+                                    <td class="py-3  md:p-3  "><?= number_format($item['price'] * $item['sl']) ?></td>
+                                    <td class="py-3  md:p-3  "><a href="../Model/deletecart.php?id=<?php echo $item['id'] ?>">Xóa</a></td>
                                     <button></button>
                                 </tr>
                             <?php } ?>
@@ -209,9 +227,9 @@ if (isset($_POST['submit'])) {
 
                     </tbody>
                     <tfoot>
-                        <tr class="items-center bg-[#e76ea5] text-white font-semibold ">
-                            <td colspan="4" class="px-10 py-3 text-[20px]  font-sans">Tổng tiền</td>
-                            <td colspan="2" class="text-[20px]  font-sans">
+                        <tr class="items-center bg-[#e76ea5] text-white font-semibold flex flex-col flex-no wrap sm:table-row md:mb-2 sm:mb-0">
+                            <td colspan="4" class="md:px-10 md:py-3 md:text-[20px]  font-sans md:p-3 text-left">Tổng tiền</td>
+                            <td colspan="2" class="md:text-[20px]  font-sans md:p-3 text-left">
                                 <?php
                                 $total_all = 0;
                                 ?>
@@ -227,29 +245,41 @@ if (isset($_POST['submit'])) {
     if (!empty($_SESSION["cart"])) {
      
 ?>
-<h2 class="font-bold text-[28px] text-center py-4 ">Thông tin nhận hàng</h2>
 
+        <div class="grid md:grid-cols-2 ">
+
+       <div>
+
+     
 <form action="" method="post" class="border rounded-xl mx-6 mb-6 px-6 py-6 bg-white">
-    <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Họ tên (*):</p>
-    <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="hoten" require type="text" placeholder="Họ tên của bạn">
-    <p style="margin-left: 15px ;  " class="font-bold text-[18px]"> Địa chỉ (*): </p>
-    <input style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" name="diachi" require type="text" placeholder="Địa chỉ">
-    <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Email: </p>
-    <input title="Định dạng Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="email " name="email" placeholder="Địa chỉ email của bạn">
-    <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Số điện thoại (*):</p>
-    <input title="Định dạng số điện thoại" pattern="[0-9]{10}" style="width: 1250px ; margin-left: 15px ;" class="border rounded-sm w-full px-2 py-1.5 my-2" type="text" require name="phone" placeholder="Số điện thoại của bạn">
-    <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Nội dung:</p>
-    <textarea style="width: 1250px ; margin-left: 15px ;" class="border text-black rounded-sm w-full px-2 py-1.5 my-2" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung">
+        <h2 class="font-bold text-[28px] text-center py-4 ">Thông tin nhận hàng</h2>
+    <p class="pt-3 pb-2 mx-10"> Họ tên (*):</p>
+    <input class=" rounded-xl w-[80%] px-5 py-2  mx-10 " name="hoten" require type="text" placeholder="Họ tên của bạn">
+    <p class="pt-3 pb-2 mx-10"> Địa chỉ (*): </p>
+    <input class="rounded-xl w-[80%] px-5 py-2  mx-10" name="diachi" require type="text" placeholder="Địa chỉ">
+    <p class="pt-3 pb-2 mx-10"> Email: </p>
+    <input title="Định dạng Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="rounded-xl w-[80%] px-5 py-2  mx-10" type="email " name="email" placeholder="Địa chỉ email của bạn">
+    <p class="pt-3 pb-2 mx-10"> Số điện thoại (*):</p>
+    <input title="Định dạng số điện thoại" pattern="[0-9]{10}" class="rounded-xl w-[80%] px-5 py-2  mx-10" type="text" require name="phone" placeholder="Số điện thoại của bạn">
+    <p class="pt-3 pb-2 mx-10"> Nội dung:</p>
+    <textarea class="rounded-xl w-[80%]  px-5 py-2  mx-10" name="noidung" id="" cols="30" rows="5" placeholder="Nội dung">
 </textarea>
-    <p style="margin-left: 15px ; " class="font-bold text-[18px]"> Phương thức thanh toán:</p>
-    <select style="margin-left: 15px ; width:200px; margin-bottom:20px;" name="thanhtoan" id="" class="border rounded-sm w-full px-2 py-1.5 my-2">
+    <p style="margin-left: 40px ; " class="font-bold text-[18px]"> Phương thức thanh toán:</p>
+    <select style="margin-left: 40px ; width:200px; margin-bottom:20px;" name="thanhtoan" id="" class="border rounded-sm  px-2 py-1.5 my-2">
         <option value="Tiền mặt">Trả tiền khi nhận hàng</option>
     </select>
     <br>
-    <input style=" margin-left: 15px ;margin-bottom: 10px ;" type="submit" name="submit" value="Gửi" class="border rounded-md hover:bg-[#e1498e]  bg-[#E76EA5] text-white font-bold px-10 py-1.5">
+    <input style=" margin-left: 40px ;margin-bottom: 10px ;" type="submit" name="submit" value="Gửi" class="border rounded-md hover:bg-[#e1498e]  bg-[#E76EA5] text-white font-bold px-10 py-1.5">
 
 </form>
+</div>
+    <div class="pl-[30%] pt-[40%] hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-36 h-36 text-[#EB83B4]">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
 
+    </div>
+        </div>
 <?php }?>
                         
 
@@ -262,7 +292,7 @@ if (isset($_POST['submit'])) {
 
 
         <footer class="px-4 md:px-0 border-t-2 ">
-            <div class="max-w-7xl m-auto pt-8 grid grid-cols-4 gap-8">
+            <div class="max-w-7xl m-auto pt-8 grid md:grid-cols-4 gap-8">
                 <div class="">
                     <a href=""><img class="w-[180px] h-[48px] mb-6" src="../imgs/header_logo.png" alt=""></a>
                     <span class=" font-[900] ">Công ty Cổ phần TaeHui Mang thanh xuân đến cho phụ nữ Việt</span>
@@ -306,7 +336,16 @@ if (isset($_POST['submit'])) {
 
     </article>
 
-
+    <script>
+        function handClick() {
+    menu = document.getElementById('main-menu')
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none'
+    } else {
+        menu.style.display = 'block'
+    }
+}
+      </script>
 </body>
 
 </html>
