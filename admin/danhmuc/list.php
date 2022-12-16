@@ -26,7 +26,7 @@
         <td><?=$detail?></td>
         <td>
             <a href="<?=$suadm?>" class="bg-blue-400 text-white px-3 py-2 rounded-md hover:bg-gray-400 ">Sửa</a>
-            <a  onclick="return confirm('Bạn có muốn xóa danh mục này không')" href="<?=$xoadm?>"  class="bg-red-400 text-white px-3 py-2 rounded-md hover:bg-gray-400">Xóa</a>
+            <!-- <a  onclick="return confirm('Bạn có muốn xóa danh mục này không')" href="<?=$xoadm?>"  class="bg-red-400 text-white px-3 py-2 rounded-md hover:bg-gray-400">Xóa</a> -->
         </td>
     </tr>
         

@@ -275,10 +275,7 @@ input[type=number]::-webkit-outer-spin-button {
 
     </div>
 
-    <div class="flex justify-between pt-4">
-      <a href="" class="hover:text-[#666666]"> 🠠 Sản phẩm trước</a>
-      <a href="" class="hover:text-[#666666]"> Sản phẩm sau ➝</a>
-    </div>
+    
 
     </div>
     </div>
@@ -460,6 +457,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 
     $(".qt-plus").click(function() {
+      if(parseInt($(".qt").val())<10)
       $(".qt").val(parseInt($(".qt").val())+1)
       changeVal();
 
