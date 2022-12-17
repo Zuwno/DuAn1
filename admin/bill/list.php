@@ -42,7 +42,7 @@
                             echo" <td class='text-red-500'>$bill_status</td>";
 
                         }
-                        ?>;
+                        ?>
                         <td>
                                <?php if($bill_status != "Đơn hàng đã hủy") echo'<a href="' . $suabill . '" class="bg-blue-400 text-white px-3 py-2 rounded-md hover:bg-gray-400  ">Xác nhận</a>' ?>
                                 <a href="<?=$ctbill?>" class="bg-blue-400 text-white px-3 py-2 rounded-md hover:bg-gray-400  ">Chi tiết</a>                          
