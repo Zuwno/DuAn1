@@ -108,8 +108,8 @@
       </section>
       <section>
 
-        <form method="post" action="" class="ml-[1030px] mt-4">
-          <input name="search_value" style="border: 1px solid; border-radius: 5px;" type="text">
+        <form method="post" action="" class="ml-[1025px] mt-4">
+          <input class="pl-2" placeholder="Tìm kiếm" name="search_value" style="border: 1px solid; border-radius: 5px;" type="text">
           <input name="search" class="bg-[#e76ea5] text-white px-3 py-[2px] " style="border: 2px solid; border-radius: 5px;" type="submit" value="Tìm kiếm" >
         </form>
 
@@ -165,7 +165,7 @@
                 <a href="chiTietSp.php?id=<?php echo $row['id_product'] ?>"> <img class="md:w-full w-[265px] h-[265px] m-auto " src="../imgs/<?php echo $row['img'] ?>" alt=""></a>
 
                 <div class=" py-4 ">
-                  <span class="text-[20px] font-[400] text-[#777]"><?php echo $row['name'] ?></span><br>
+                  <span class="text-[19px] font-[400] "><?php echo $row['name'] ?></span><br>
                   <span style="color: red ;" class="text-[20px] font-[400] "><?php echo $row['price'] ?>đ</span><br>
                   <a style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical; overflow: hidden; " href="chiTietSp.php?id=<?php echo $row['id_product'] ?>" class="text-[#4E657B] hover:text-[#f84689] "><?php echo $row['detail'] ?></a> <br>
 

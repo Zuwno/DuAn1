@@ -114,7 +114,8 @@ session_start();
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button {  
 
-   opacity: 1;
+  -webkit-appearance: none;
+  margin: 0;
 
 }
   </style>
@@ -339,7 +340,7 @@ input[type=number]::-webkit-outer-spin-button {
         <input type="text" class="bg-[#E1E5EB] px-4 py-1 rounded-lg my-1 w-[200px]] px-4 py-1 my-1 w-[200px]" name="Hoten" ><br>
         <label for="" class="pr-1">Bình luận:</label>
         <input type="text" class="bg-[#E1E5EB] rounded px-4 py-1 w-[200px]" name="Binhluan" >
-        <input class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-sm px-4 mx-1 py-1 font-[600] bg-[#e76ea5]" type="submit" name="submit_comment" >
+        <input value="Gửi" class="border border-[#e76ea5] text-white hover:bg-[#F8A4C4] rounded-sm px-4 mx-1 py-1 font-[600] bg-[#e76ea5]" type="submit" name="submit_comment" >
         </form>
         <hr>
         <?php
