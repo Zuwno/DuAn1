@@ -207,7 +207,7 @@ input[type=number]::-webkit-outer-spin-button {
                 <h2 class="font-bold text-[27px] pl-5 md:pl-0"><?php echo $row['name'] ?></h2>
                
                 <form action="../View/add_cart.php?add_cart&id=<?=$_GET['id']?>" method="post" class="px-4">
-                <div class="py-4">
+                <div class="">
                   <span>Danh mục : <a href="" class="text-[#e76ea5] "><?php echo $row['id_category'] ?></a></span><br>
                   <div class="flex justify-between py-2"><span>Số lượng : </span><span>Giá Tiền:</span>
                   </div>
@@ -230,7 +230,7 @@ input[type=number]::-webkit-outer-spin-button {
                       </div>
                     </div>
                   </div>
-                  <div class="border border-[#e76ea5] rounded-lg mt-[100px] text-center">
+                  <div class="border border-[#e76ea5] rounded-lg mt-[50px] text-center">
                   <div class="bg-[#e76ea5] rounded-t-lg text-[15px] font-bold py-1.5 text-center"> <span class="text-white">Mô Tả sản phẩm</span>
 
                   </div>
@@ -250,7 +250,7 @@ input[type=number]::-webkit-outer-spin-button {
                   </body>
 
     </div><br>
-    <div class="social-icons text-[#cfcfcf] flex gap-1 ">
+    <div class="social-icons text-[#cfcfcf] flex gap-1 px-4 ">
 
 
       <a target="_blank" class="social-icon social-icon--facebook docs-creator" href="https://www.facebook.com/taehuivietnam">
