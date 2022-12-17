@@ -459,15 +459,7 @@ body {
 								Tài khoản quản trị
 							</b>
 						</p>
-						<p>
-							<span>
-								Đăng nhập tài khoản quản trị :
-							</span>
-							<b onclick="toggle()" class="pointer">
-								Quên mật khẩu ?
-							</b>
-                            
-						</p>
+						
                         
 					</div>
                     
